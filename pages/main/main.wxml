@@ -1,0 +1,6 @@
+<!--pages/main/main.wxml-->
+<view class="container">
+  <view class="text">欢迎来到项目首页
+    这里是泰山旅游小程序毛坯版</view>
+  
+</view>
