@@ -1,10 +1,7 @@
 <!--pages/main/main.wxml-->
 <view class="container">
-  <view class="text">欢迎来到项目首页
-    这里是泰山旅游小程序毛坯版</view>
-    <view>测试</view>
-  <button class="pingpang">
-  我吧按钮删了ahahaha
-  </button>
-  <text>我我我哦我</text>
+    <text>main为首页</text>
+    <text>look为地图预览</text>
+    <text>help为登山助手</text>
+    <text>path为旅行足迹</text>
 </view>

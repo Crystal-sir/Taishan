@@ -1,19 +1,47 @@
 {
   "pages":[
     "pages/main/main",
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/look/look",
+    "pages/help/help",
+    "pages/path/path"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarTitleText": "泰山伴旅",
     "navigationBarTextStyle":"black"
   },
   "permission": {
     "scope.userLocation": {
       "desc": "你的位置信息将用于小程序位置接口的效果展示" 
     }
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/main/main",
+      "text": "首页",
+      "iconPath": "",
+      "selectedIconPath": ""
+    },
+    {
+      "pagePath": "pages/look/look",
+      "text": "路线预览",
+      "iconPath": "",
+      "selectedIconPath": ""
+    },
+    {
+      "pagePath": "pages/help/help",
+      "text": "登山助手",
+      "iconPath": "",
+      "selectedIconPath": ""
+    },
+    {
+      "pagePath": "pages/path/path",
+      "text": "旅行足迹",
+      "iconPath": "",
+      "selectedIconPath": ""
+    }
+  ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
