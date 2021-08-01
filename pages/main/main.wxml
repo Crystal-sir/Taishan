@@ -1,4 +1,26 @@
 <!--pages/main/main.wxml-->
+<!--轮播图-->
+<view>
+<swiper class="content-info-slide" indicator-color="rgba(255,255,255,.5)"
+ indicator-active-color="#fff" indicator-dots circular autoplay>
+ <swiper-item>
+ <!--图片上传到服务器，复制图片的云地址-->
+ <image src="cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/泰山.jpg"></image> //
+ </swiper-item>
+ <swiper-item>
+ <image src="cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/泰山.jpg"></image>
+ </swiper-item>
+ <swiper-item>
+ <image src="cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/泰山.jpg"></image>
+ </swiper-item>
+ </swiper>
+</view>
+
+<!-- 天气预报-->
+<view>
+    <button><navigator url="weather/weather?title=欢迎查询天气">更多信息</navigator></button>
+</view>
+
 <view class="container">
     <text>main为首页</text>
     <text>look为地图预览</text>

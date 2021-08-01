@@ -46,6 +46,7 @@
     "servePath": ""
   },
   "isGameTourist": false,
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
   "condition": {
     "search": {
       "list": []
