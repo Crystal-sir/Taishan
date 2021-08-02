@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/begin/begin",
     "pages/main/main",
     "pages/look/look",
     "pages/help/help",
@@ -8,7 +9,7 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#eee",
     "navigationBarTitleText": "泰山伴旅",
     "navigationBarTextStyle": "black"
   },
@@ -18,30 +19,32 @@
     }
   },
   "tabBar": {
+    "color": "",
+    "selectedColor": "#D63519",
     "list": [
       {
         "pagePath": "pages/main/main",
         "text": "首页",
-        "iconPath": "",
-        "selectedIconPath": ""
+        "iconPath": "/images/icon1.png",
+        "selectedIconPath": "/images/icon11.png"
       },
       {
         "pagePath": "pages/look/look",
         "text": "路线预览",
-        "iconPath": "",
-        "selectedIconPath": ""
+        "iconPath": "/images/icon2.png",
+        "selectedIconPath": "/images/icon22.png"
       },
       {
         "pagePath": "pages/help/help",
         "text": "登山助手",
-        "iconPath": "",
-        "selectedIconPath": ""
+        "iconPath": "/images/icon3.png",
+        "selectedIconPath": "/images/icon33.png"
       },
       {
         "pagePath": "pages/path/path",
         "text": "旅行足迹",
-        "iconPath": "",
-        "selectedIconPath": ""
+        "iconPath": "/images/icon4.png",
+        "selectedIconPath": "/images/icon44.png"
       }
     ]
   },

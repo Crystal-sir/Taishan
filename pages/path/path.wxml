@@ -1,2 +1,4 @@
 <!--pages/path/path.wxml-->
 <text>pages/path/path.wxml</text>
+<button bindtap="do">上传照片</button>
+<button bindtap="query">查看所有记录</button>
