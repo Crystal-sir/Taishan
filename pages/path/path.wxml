@@ -5,3 +5,4 @@
 <view>
   <image src="/images/icon1.png" bindtap="getWhere"></image>
 </view>
+<button bindtap="query">查看所有记录</button>
