@@ -2,7 +2,7 @@
 let fileid="";//静态文件id
 let photoName="";//静态图片名称
 let filepath="";//静态文件路径
-let num;
+let num;//点击图片中点的编号
 Page({
 
   /**
@@ -12,6 +12,11 @@ Page({
     userInfo:{},
     hasUserInfo:false,
     canIUseGetUserProfile: false,
+  },
+  //获得用户点击位置
+  getWhere(e){
+    console.log(e.detail.x);
+    console.log(e.detail.y)
   },
   //处理上传图片逻辑
   do(){
@@ -41,7 +46,8 @@ Page({
   Add(){
     wx.cloud.database().collection("photo").add({
       data:{
-        fileID:fileid
+        fileID:fileid,
+        id:num
       },
       success(res){
         console.log(fileid);
@@ -83,7 +89,7 @@ Page({
   query(e){
     wx.cloud.database().collection("photo").get({
       success(res){
-        console.log(res);
+        console.log(res.data.length);
       },
       fail(err){
         console.log(err);
