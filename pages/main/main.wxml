@@ -52,3 +52,24 @@
  </swiper-item>
  </swiper>
 </view>
+
+<!--星战动画-->
+<view class="container">
+    <view class="content">
+        <view class="content-word">
+            <view class="content-move">
+                <view class="world">傅番瑞大帅哥，傅番瑞大帅哥，傅番瑞大帅哥，</view>
+                <view class="world">傅番瑞大帅哥，傅番瑞大帅哥，傅番瑞大帅哥，，</view>
+                <view class="world">傅番瑞大帅哥，傅番瑞大帅哥，傅番瑞大帅哥，</view>
+                    <view class="world">傅番瑞大帅哥，傅番瑞大帅哥，傅番瑞大帅哥，</view>
+                    <view class="world">傅番瑞大帅哥，傅番瑞大帅哥，傅番瑞大帅哥，</view>
+                    <view class="world">傅番瑞大帅哥，傅番瑞大帅哥，傅番瑞大帅哥，</view>
+                    <view class="world">傅番瑞大帅哥，傅番瑞大帅哥，傅番瑞大帅哥，</view>
+                    <view class="world">傅番瑞大帅哥，傅番瑞大帅哥，傅番瑞大帅哥，</view>
+                    <view class="world">傅番瑞大帅哥，傅番瑞大帅哥，傅番瑞大帅哥，</view>
+                    <view class="world">傅番瑞大帅哥，傅番瑞大帅哥，傅番瑞大帅哥，</view>
+                    <view class="world">傅番瑞大帅哥，傅番瑞大帅哥，傅番瑞大帅哥，</view>
+                </view>
+            </view>
+        </view>
+    </view>
