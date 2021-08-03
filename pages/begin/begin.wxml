@@ -1,0 +1,3 @@
+<!--pages/begin/begin.wxml-->
+<text>开始页面</text>
+<button bindtap="go">立即使用</button>
