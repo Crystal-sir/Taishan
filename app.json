@@ -5,6 +5,7 @@
     "pages/look/look",
     "pages/help/help",
     "pages/path/path",
+    "pages/path/show/show",
     "pages/main/weather/weather"
   ],
   "window": {

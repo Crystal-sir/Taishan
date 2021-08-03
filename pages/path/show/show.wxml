@@ -1,0 +1,11 @@
+<!--pages/path/show/show.wxml-->
+<view class="container">
+  <!--图片盒子-->
+  <view class="imgbox">
+    <image src="{{fileid}}"></image>
+  </view>
+  <view class="text">
+    
+  </view>
+</view>
+

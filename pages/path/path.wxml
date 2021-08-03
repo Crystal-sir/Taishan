@@ -1,8 +1,13 @@
-<!--pages/path/path.wxml-->
-<text>pages/path/path.wxml</text>
+
 <button bindtap="do">上传照片</button>
 <button bindtap="query">查看所有记录</button>
-<view>
-  <image src="/images/icon1.png" bindtap="getWhere"></image>
+<button bindtap="go">跳转</button>
+<text class="{{str}}">测试</text>
+<view class="container" bindtap="getWhere">
+  <view class="imgbox">
+    <image src="{{mapUrl}}"></image>  
+  </view>
+  <view wx:for="list" wx:key="*this">
+    <image class="{{item.css}}" src="{{item.src}}"></image>
+  </view>
 </view>
-<button bindtap="query">查看所有记录</button>
