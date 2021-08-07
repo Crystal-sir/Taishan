@@ -11,26 +11,9 @@
 </swiper>
 </view>
 
-<!--轮播图-->
-<view>
-<swiper class="content-info-slide" indicator-color="rgba(255,255,255,.5)"
- indicator-active-color="#fff" indicator-dots circular autoplay>
- <swiper-item>
- <!--图片上传到服务器，复制图片的云地址-->
- <image src="cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/泰山.jpg"></image> //
- </swiper-item>
- <swiper-item>
- <image src="cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/泰山.jpg"></image>
- </swiper-item>
- <swiper-item>
- <image src="cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/泰山.jpg"></image>
- </swiper-item>
- </swiper>
-</view>
-
 <!-- 天气预报-->
+
 <view class="header-modular" wx:if="{{now}}">
-	<image class="bg-wave" src="https://codermoyv.gitee.io/coder-moyv/assets/images/wechat/bg_wave.gif"></image>
 	<view class="row">
 		<view class="row location-wrap" bindtap="selectLocation">
 			<image class="icon" src="cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/icon_location.png"></image>
@@ -40,7 +23,10 @@
 	</view>
 	<view class="row">
 		<view class="tmp">{{now.temp}}°</view>
+		<!--点击天气图标查看详情-->
+		<navigator url="weather/weather?title=欢迎查询天气">
 		<image class="icon-weather" src="https://codermoyv.gitee.io/coder-moyv/assets/images/wechat/weather_custom/{{now.icon}}.png"></image>
+		</navigator>
 	</view>
 	<view class="tips-wrap">
 		<view class="tips ">{{now.windDir}} {{now.windScale}}级</view>
@@ -48,5 +34,42 @@
 		<view class="tips ">气压 {{now.pressure}}Pa</view>
 	</view>
 </view>
-<button><navigator url="weather/weather?title=欢迎查询天气">更多信息</navigator></button>
 
+
+<!--轮播图-->
+<view>
+<swiper class="content-info-slide" indicator-color="rgba(255,255,255,.5)"
+ indicator-active-color="#fff" indicator-dots circular autoplay>
+ <swiper-item>
+ <!--图片上传到服务器，复制图片的云地址-->
+ <image src="cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/泰山1.jpg"></image> //
+ </swiper-item>
+ <swiper-item>
+ <image src="cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/泰山2.jpg"></image>
+ </swiper-item>
+ <swiper-item>
+ <image src="cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/泰山3.jpg"></image>
+ </swiper-item>
+ </swiper>
+</view>
+
+<!--星战动画-->
+<view class="container">
+    <view class="content">
+        <view class="content-word">
+            <view class="content-move">
+                <view class="world">傅番瑞大帅哥，傅番瑞大帅哥，傅番瑞大帅哥，</view>
+                <view class="world">傅番瑞大帅哥，傅番瑞大帅哥，傅番瑞大帅哥，，</view>
+                <view class="world">傅番瑞大帅哥，傅番瑞大帅哥，傅番瑞大帅哥，</view>
+                    <view class="world">傅番瑞大帅哥，傅番瑞大帅哥，傅番瑞大帅哥，</view>
+                    <view class="world">傅番瑞大帅哥，傅番瑞大帅哥，傅番瑞大帅哥，</view>
+                    <view class="world">傅番瑞大帅哥，傅番瑞大帅哥，傅番瑞大帅哥，</view>
+                    <view class="world">傅番瑞大帅哥，傅番瑞大帅哥，傅番瑞大帅哥，</view>
+                    <view class="world">傅番瑞大帅哥，傅番瑞大帅哥，傅番瑞大帅哥，</view>
+                    <view class="world">傅番瑞大帅哥，傅番瑞大帅哥，傅番瑞大帅哥，</view>
+                    <view class="world">傅番瑞大帅哥，傅番瑞大帅哥，傅番瑞大帅哥，</view>
+                    <view class="world">傅番瑞大帅哥，傅番瑞大帅哥，傅番瑞大帅哥，</view>
+                </view>
+            </view>
+        </view>
+    </view>
