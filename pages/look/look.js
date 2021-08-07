@@ -5,8 +5,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    popup: true
   },
+/* 隐藏弹窗 */
+hidePopup(flag = true) {
+  this.setData({
+      "popup": flag
+  });
+},
+/* 显示弹窗 */
+showPopup() {
+  this.hidePopup(false);
+},
 
   /**
    * 生命周期函数--监听页面加载
