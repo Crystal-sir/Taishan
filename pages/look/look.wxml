@@ -1,6 +1,6 @@
 <!--pages/look/look.wxml-->
 <view class='shade' hidden='{{popup}}' bindtap='hidePopup'></view>
-<view class='shade_box popup' hidden='{{popup}}'>
+<scroll-view class='shade_box popup' hidden='{{popup}}' scroll-y="true">
     <view class='title'><text>弹窗：</text></view>
     <view class='content'>
       <image class='ima' src="/images/icon1.png"></image>
@@ -8,7 +8,7 @@
     </view>
     <view class='copy'>文字</view>
     <view class='msg' bindtap='hidePopup'>点击遮罩层关闭弹窗</view>
-</view>
+</scroll-view>
  
 <view  style='margin:20rpx 50rpx;'>
     <button type='primary' bindtap='showPopup'>打开弹窗</button>

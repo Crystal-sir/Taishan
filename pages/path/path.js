@@ -1,33 +1,76 @@
 // pages/path/path.js
-let fileid="cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/拒贿。.jpg";//静态文件id
+//由于函数异步执行的缘故，故云函数内嵌套过多
+let fileid="";
 let photoName="";//静态图片名称
 let filepath="";//静态文件路径
 let num;//点击图片中点的编号
-let photo_array;//静态数组，保存用户查询到的所有图片信息
+let photo_array=new Array;//静态数组，保存用户查询到的所有图片信息
 var util=require("../../utils/util.js");
 let TIME=util.formatTime(new Date());
 let time;//日期
+let vis=new Array;//静态数组，判断该点是否被点亮
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    popup:true,
     userInfo:{},
     hasUserInfo:false,
     canIUseGetUserProfile: false,
-    mapUrl:"cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/拒贿。.jpg",
-    list:[],
+    mapUrl:"cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/map.jpg",
+    array:[],
     mx:"10",//图中有多少个点
+    upTime:"",
+    showFileId:"",
+  },
+  //点击图片后查看
+  look(e){
+    let that=this;
+    wx.previewImage({
+      urls: [that.data.showFileId],
+    })
+  },
+  /* 隐藏弹窗 */
+  hidePopup(flag = true) {
+    this.setData({
+        "popup": flag
+    });
+  },
+  /* 显示弹窗 */
+  showPopup() {
+    this.hidePopup(false);
   },
   /*
     获得用户点击位置
-    在此可通过判断x，y值来确定点击景点的编号并将其存入
     静态变量num
+    上传图片或者更换图片逻辑处理
   */
   getWhere(e){
-    console.log("x="+e.detail.x);
-    console.log("y="+e.detail.y);
+    console.log("点击了图中点的编号为:"+e.target.dataset.num);
+    num=e.target.dataset.num;
+    if(num==undefined) {
+      wx.showToast({
+        title:"请点击旁边的小花图标哦",
+        icon:"none",
+      })
+    }
+    else if(vis[num]==0) this.do();//如果当前未点亮，则上传图片处理
+    else this.show();
+  },
+  //此函数为用户点击已经点亮的景点时触发，弹出对话框
+  show(){
+    for(let i=0;i<photo_array.length;i++){
+      if(photo_array[i].id==num){
+        this.setData({
+          upTime:photo_array[i].time,
+          showFileId:photo_array[i].fileID,
+        });
+        break;
+      }
+    }
+    this.showPopup();
   },
   //处理上传图片逻辑
   do(){
@@ -85,8 +128,9 @@ Page({
   //上传图片
   uploadImage(e){
     let that=this;
+    //选择图片
     wx.chooseImage({
-      count: 1,
+      count: 1,//选择图片的数量上限
       sizeType: ['original', 'compressed'],
       sourceType: ['album', 'camera'],
       success: (res) => {
@@ -98,11 +142,24 @@ Page({
     })
   },
   //查看一个用户的所有图片
+  //并将该用户信息更新至静态数组内
   query(e){
+    let that=this;
     wx.cloud.database().collection("photo").get({
       success(res){
-        console.log(res);
         photo_array=res.data;//保存图片信息至静态变量
+        console.log(photo_array);
+        //读取用户全部图片信息，并相应修改array数组
+        for(let i=0;i<photo_array.length;i++){
+          let v=photo_array[i].id;
+          vis[v]=1;
+          that.data.array[v].src="cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/icon.png";
+          //切换图片点亮状态
+        }
+        //将修改后的array重置回array
+        that.setData({
+          array:that.data.array,
+        });
       },
       fail(err){
         console.log(err);
@@ -123,12 +180,6 @@ Page({
       }
     }
   },
-  //跳转至显示图片界面
-  go(e){
-    wx.navigateTo({
-      url:"/pages/path/show/show?fileid="+fileid+"&time="+time,
-    })
-  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -138,14 +189,22 @@ Page({
         canIUseGetUserProfile: true
       })
     }
+
+    let that=this;//存储this指针
+
     const TIME=util.formatTime(new Date());
     console.log(TIME)
     for(let i=0;i<this.data.mx;i++){
       //注意数组内对象为空时要给他初始化
-      if(this.data.list[i]=="undefined"||this.data.list[i]==null) this.data.list[i]={};
-      this.data.list[i].css="p"+i;
-      this.data.list[i].src="";//初始化为未点亮图片
+      vis[i]=0;
+      if(this.data.array[i]=="undefined"||this.data.array[i]==null) this.data.array[i]={};
+      this.data.array[i].css="p"+i;//css样式
+      this.data.array[i].id=i;//点的编号
+      this.data.array[i].src="cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/icon.png";//初始化为未点亮图片
     }
+    
+    this.query();
+    
   },
 
   /**

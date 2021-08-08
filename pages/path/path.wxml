@@ -1,13 +1,24 @@
+<!--遮罩层-->
+<view class='shade' hidden='{{popup}}' bindtap='hidePopup'></view>
+<!--弹窗-->
+<scroll-view class='shade_box popup' hidden='{{popup}}' scroll-y="true">
+    <view class='title'><text>弹窗：</text></view>
+    <view class='content'>
+      <image class='ima' src="{{showFileId}}" bindtap="look"></image>
+      <view class="time">{{upTime}}</view>
+      <button bindtap="do">上传新图片</button>
+    </view>
+</scroll-view>
 
-<button bindtap="do">上传照片</button>
-<button bindtap="query">查看所有记录</button>
-<button bindtap="go">跳转</button>
-<text class="{{str}}">测试</text>
-<view class="container" bindtap="getWhere">
-  <view class="imgbox">
-    <image src="{{mapUrl}}"></image>  
-  </view>
-  <view wx:for="list" wx:key="*this">
-    <image class="{{item.css}}" src="{{item.src}}"></image>
-  </view>
+<view class="container">
+  <scroll-view style="height:100%;">
+    <movable-area class="img" scale-area="true">
+      <movable-view direction="all" scale scale-min="1" scale-max="10" scale-value="1" bindtap="getWhere">
+        <image src="{{mapUrl}}"></image>
+        <view wx:for="{{array}}" wx:key="*this">
+          <image class="{{item.css}}" src="{{item.src}}" data-num="{{item.id}}"></image>
+        </view>
+      </movable-view>
+    </movable-area>
+  </scroll-view>
 </view>
