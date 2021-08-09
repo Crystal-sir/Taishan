@@ -5,7 +5,8 @@
     <view class='title'><text>弹窗：</text></view>
     <view class='content'>
       <image class='ima' src="{{showFileId}}" bindtap="look"></image>
-      <view class="time">{{upTime}}</view>
+      <view class="text">{{location}}</view>
+      <view class="time">{{upTime}}上传</view>
       <button bindtap="do">上传新图片</button>
     </view>
 </scroll-view>

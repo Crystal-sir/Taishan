@@ -78,7 +78,7 @@ movable-view{
 /* 当前弹窗样式 */
 .popup{
   width: 600rpx;
-  height: 600rpx;
+  height: 800rpx;
   background-color: #ffffff;
 }
 .popup .title{
@@ -110,22 +110,134 @@ movable-view{
 }
 /*弹窗部分*/ 
 .time{
-  padding-top: 20px;
+  padding-top: 10px;
 }
 .p0{
   
-  width: 100px;
-  height: 100px;
+  width: 40rpx;
+  height: 40rpx;
 
   position: absolute;
-  top: 10px;
-  left: 10px;
+  bottom: 9%;
+  right: 2%;
 }
 .p1{
-  width: 100rpx;
-  height: 100rpx;
+  width: 40rpx;
+  height: 40rpx;
 
   position:absolute;
-  top: 100rpx;
-  right: 100rpx;
+  right: 8%;
+  bottom: 10%;
+}
+.p2{
+  width: 40rpx;
+  height: 40rpx;
+
+  position:absolute;
+  right: 29%;
+  bottom: 10%;
+}
+.p3{
+  width: 40rpx;
+  height: 40rpx;
+
+  position:absolute;
+  right: 7%;
+  bottom: 20%;
+}
+.p4{
+  width: 40rpx;
+  height: 40rpx;
+
+  position:absolute;
+  right: 38%;
+  bottom: 13%;
+}
+.p5{
+  width: 40rpx;
+  height: 40rpx;
+
+  position:absolute;
+  right: 41%;
+  bottom: 19%;
+}
+.p6{
+  width: 40rpx;
+  height: 40rpx;
+
+  position:absolute;
+  right: 17%;
+  bottom: 22%;
+}
+.p7{
+  width: 40rpx;
+  height: 40rpx;
+
+  position:absolute;
+  right: 37%;
+  bottom: 25%;
+}
+.p8{
+  width: 40rpx;
+  height: 40rpx;
+
+  position:absolute;
+  right: 37%;
+  bottom: 36%;
+}
+.p9{
+  width: 40rpx;
+  height: 40rpx;
+
+  position:absolute;
+  right: 48%;
+  bottom: 35%;
+}
+.p10{
+  width: 40rpx;
+  height: 40rpx;
+
+  position:absolute;
+  right: 61%;
+  bottom: 42%;
+}
+.p11{
+  width: 40rpx;
+  height: 40rpx;
+
+  position:absolute;
+  left: 19%;
+  top: 42%;
+}
+.p12{
+  width: 40rpx;
+  height: 40rpx;
+
+  position:absolute;
+  left: 56%;
+  top: 37%;
+}
+.p13{
+  width: 40rpx;
+  height: 40rpx;
+
+  position:absolute;
+  left: 15%;
+  top: 36%;
+}
+.p14{
+  width: 40rpx;
+  height: 40rpx;
+
+  position:absolute;
+  left: 15%;
+  top: 36%;
+}
+.p21{
+  width: 40rpx;
+  height: 40rpx;
+
+  position: absolute;
+  bottom: 10%;
+  left: 38%;
 }

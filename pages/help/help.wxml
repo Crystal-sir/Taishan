@@ -1,2 +1,6 @@
 <!--pages/help/help.wxml-->
 <text>pages/help/help.wxml</text>
+<view wx:for="{{array}}">
+  <image src="{{item.src}}"></image>
+</view>
+<button bindtap="click">点击</button>

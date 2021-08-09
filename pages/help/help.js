@@ -5,9 +5,16 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    array:[{src:"cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/icon.png",}],
   },
+  click(){
+    let that=this;
+    that.data.array[0].src="cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/icon_no.jpg";
 
+    this.setData({
+      array:that.data.array,
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

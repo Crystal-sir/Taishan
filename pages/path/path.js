@@ -21,9 +21,10 @@ Page({
     canIUseGetUserProfile: false,
     mapUrl:"cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/map.jpg",
     array:[],
-    mx:"10",//图中有多少个点
+    mx:"22",//图中有多少个点
     upTime:"",
     showFileId:"",
+    location:"",
   },
   //点击图片后查看
   look(e){
@@ -50,6 +51,10 @@ Page({
   getWhere(e){
     console.log("点击了图中点的编号为:"+e.target.dataset.num);
     num=e.target.dataset.num;
+    let loc=this.getLoc();
+    this.setData({
+      location:loc,
+    })
     if(num==undefined) {
       wx.showToast({
         title:"请点击旁边的小花图标哦",
@@ -58,6 +63,37 @@ Page({
     }
     else if(vis[num]==0) this.do();//如果当前未点亮，则上传图片处理
     else this.show();
+  },
+  //根据编号获取地点名称
+  getLoc(){
+    let res="";
+    switch(num)
+    {
+        case 0:res="岱庙";break;
+        case 1:res="红门宫";break;
+        case 2:res="岱宗坊";break;
+        case 3:res="万仙楼";break;
+        case 4:res="斗母宫";break;
+        case 5:res="壶天阁";break;
+        case 6:res="中天门";break;
+        case 7:res="云步桥";break;
+        case 8:res="五夫十松";break;
+        case 9:res="十八盘";break;
+        case 10:res="南天门";break;
+        case 11:res="红雨川";break;
+        case 12:res="彩石溪";break;
+        case 13:res="碧霞寺";break;
+        case 14:res="桃花峪";break;
+        case 15:res="天街";break;
+        case 16:res="碧霞祠";break;
+        case 17:res="唐摩崖";break;
+        case 18:res="五岳独尊";break;
+        case 19:res="玉皇顶";break;
+        case 20:res="天烛峰";break;
+        case 21:res="天外村";break;
+        //case 22:res="中天门";break;
+    }
+    return res;
   },
   //此函数为用户点击已经点亮的景点时触发，弹出对话框
   show(){
@@ -119,10 +155,21 @@ Page({
       success(res){
         fileid=res.fileID;
         that.Add();
+        that.lightUp();
       },
       fail(err){
         console.log("失败");
       }
+    })
+  },
+  //点亮编号为num的点
+  lightUp(){
+    let that=this;
+    vis[num]=1;
+    that.data.array[num].src="cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/icon.png";
+    //切换图片点亮状态
+    this.setData({
+      array:that.data.array,
     })
   },
   //上传图片
@@ -200,7 +247,7 @@ Page({
       if(this.data.array[i]=="undefined"||this.data.array[i]==null) this.data.array[i]={};
       this.data.array[i].css="p"+i;//css样式
       this.data.array[i].id=i;//点的编号
-      this.data.array[i].src="cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/icon.png";//初始化为未点亮图片
+      this.data.array[i].src="cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/icon_no.jpg";//初始化为未点亮图片
     }
     
     this.query();
