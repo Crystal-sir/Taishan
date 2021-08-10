@@ -88,6 +88,8 @@ movable-view{
   line-height: 70rpx;
   font-size: 32rpx;
   background-color:  #0e880a;
+  
+  text-align: center;
 }
 .popup .content{
   margin: 100rpx;
@@ -112,6 +114,11 @@ movable-view{
 .time{
   padding-top: 10px;
 }
+button{
+  border: 1rpx solid green;
+  margin-top: 20px;
+}
+/*地图中图标位置部分*/
 .p0{
   
   width: 40rpx;

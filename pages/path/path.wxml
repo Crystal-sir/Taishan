@@ -2,7 +2,7 @@
 <view class='shade' hidden='{{popup}}' bindtap='hidePopup'></view>
 <!--弹窗-->
 <scroll-view class='shade_box popup' hidden='{{popup}}' scroll-y="true">
-    <view class='title'><text>弹窗：</text></view>
+    <view class='title'><text>打卡历史</text></view>
     <view class='content'>
       <image class='ima' src="{{showFileId}}" bindtap="look"></image>
       <view class="text">{{location}}</view>
@@ -16,7 +16,7 @@
     <movable-area class="img" scale-area="true">
       <movable-view direction="all" scale scale-min="1" scale-max="10" scale-value="1" bindtap="getWhere">
         <image src="{{mapUrl}}"></image>
-        <view wx:for="{{array}}" wx:key="*this">
+        <view wx:for="{{array}}" wx:key="index">
           <image class="{{item.css}}" src="{{item.src}}" data-num="{{item.id}}"></image>
         </view>
       </movable-view>
