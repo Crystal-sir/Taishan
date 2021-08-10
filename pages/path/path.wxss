@@ -230,8 +230,56 @@ movable-view{
   height: 40rpx;
 
   position:absolute;
-  left: 15%;
-  top: 36%;
+  left: 33%;
+  top: 28%;
+}
+.p15{
+  width: 40rpx;
+  height: 40rpx;
+
+  position:absolute;
+  right: 22%;
+  top: 55%;
+}
+.p16{
+  width: 40rpx;
+  height: 40rpx;
+
+  position:absolute;
+  right: 33%;
+  top: 48%;
+}
+.p17{
+  width: 40rpx;
+  height: 40rpx;
+
+  position:absolute;
+  right: 12%;
+  top: 50%;
+}
+.p18{
+  width: 40rpx;
+  height: 40rpx;
+
+  position:absolute;
+  right: 8%;
+  top: 38%;
+}
+.p19{
+  width: 40rpx;
+  height: 40rpx;
+
+  position:absolute;
+  right: 22%;
+  top: 24%;
+}
+.p20{
+  width: 40rpx;
+  height: 40rpx;
+
+  position:absolute;
+  right: 22%;
+  top: 12%;
 }
 .p21{
   width: 40rpx;
