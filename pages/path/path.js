@@ -25,6 +25,14 @@ Page({
     upTime:"",
     showFileId:"",
     location:"",
+    showHelp:false,
+  },
+  //显示帮助菜单
+  help(){
+    this.setData({
+      showHelp:true,
+      popup:false,
+    })
   },
   //点击图片后查看
   look(e){
@@ -36,7 +44,8 @@ Page({
   /* 隐藏弹窗 */
   hidePopup(flag = true) {
     this.setData({
-        "popup": flag
+        "popup": flag,
+        showHelp:false,
     });
   },
   /* 显示弹窗 */

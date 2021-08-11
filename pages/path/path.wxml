@@ -2,24 +2,36 @@
 <view class='shade' hidden='{{popup}}' bindtap='hidePopup'></view>
 <!--弹窗-->
 <scroll-view class='shade_box popup' hidden='{{popup}}' scroll-y="true">
-    <view class='title'><text>打卡历史</text></view>
-    <view class='content'>
-      <image class='ima' src="{{showFileId}}" bindtap="look"></image>
-      <view class="text">{{location}}</view>
-      <view class="time">{{upTime}}上传</view>
-      <button bindtap="do">上传新图片</button>
+    <view wx:if="{{!showHelp}}">
+      <view class='title'><text>打卡历史</text></view>
+      <view class='content'>
+        <image class='ima' src="{{showFileId}}" bindtap="look"></image>
+        <view class="text">{{location}}</view>
+        <view class="time">{{upTime}}上传</view>
+        <button bindtap="do">上传新图片</button>
+      </view>
+    </view>
+    <view wx:else>
+      <view class='title'><text>功能详解</text></view>
+      <view class="help-content">
+        <view ><text>1.本页面可以对旅游地点进行打卡哦！</text></view>
+        <view ><text>2.未打卡地点旁边桃花显示为灰色。</text></view>
+        <view><text>3.进行打卡后桃花由灰色变为粉色。</text></view>
+        <view><text>4.当点击已打卡地点的桃花后会弹窗显示历史提交的照片信息，并且可以进行再次提交新照片替换旧照片。</text></view>
+      </view>
     </view>
 </scroll-view>
 
 <view class="container">
   <scroll-view style="height:100%;">
     <movable-area class="img" scale-area="true">
-      <movable-view direction="all" scale scale-min="1" scale-max="10" scale-value="1" bindtap="getWhere">
+      <movable-view direction="all" scale scale-min="1" scale-max="10" scale-value="1" bindtap="getWhere" out-of-bounds="true">
         <image src="{{mapUrl}}"></image>
         <view wx:for="{{array}}" wx:key="index">
           <image class="{{item.css}}" src="{{item.src}}" data-num="{{item.id}}"></image>
         </view>
       </movable-view>
+      <image class="help" src="/images/help.png" bindtap="help"></image>
     </movable-area>
   </scroll-view>
 </view>

@@ -79,14 +79,16 @@ movable-view{
 .popup{
   width: 600rpx;
   height: 800rpx;
+  font-size: 40rpx;
   background-color: #ffffff;
+  font-family: STFangsong ;
 }
 .popup .title{
   padding: 0 20rpx;
   border-bottom: #0e880a solid 1px;
   height: 70rpx;
   line-height: 70rpx;
-  font-size: 32rpx;
+  font-size: 40rpx;
   background-color:  #0e880a;
   
   text-align: center;
@@ -96,6 +98,16 @@ movable-view{
   font-size: 40rpx;
   text-align: center;
   color: #0099ff;
+}
+.help-content{
+  margin: 50rpx;
+  text-align: left;
+  
+  color: #333;
+  
+}
+.help-content view{
+  padding: 10rpx;
 }
 .popup .content .ima{
   height: 200rpx;
@@ -117,6 +129,15 @@ movable-view{
 button{
   border: 1rpx solid green;
   margin-top: 20px;
+}
+.help{
+  width: 40rpx;
+  height: 40rpx;
+
+  position:absolute;
+  top: 3%;
+  right: 4%;
+   
 }
 /*地图中图标位置部分*/
 .p0{

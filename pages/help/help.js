@@ -5,7 +5,37 @@ Page({
    * 页面的初始数据
    */
   data: {
+    nowLatitude:0,
+    nowAltitude:0,
+    nowLongitude:0,
+  },
+  getW(){
+    let that=this;
+    let now={};
+    wx.getSetting({
+      withSubscriptions: true,
+      success(res){
+        console.log(res.authSetting["scope.invoice"]);
+        now=res;
+        console.log(now.authSetting["scope.userLocation"])
+      }
+    })
     
+    wx.startLocationUpdate({
+      success(res){
+        console.log(res);
+      }
+    })
+    wx.getLocation({
+      success(res){
+        console.log(res);
+        that.setData({
+          nowLatitude:res.latitude,
+          nowAltitude:res.altitude,
+          nowLongitude:res.longitude,
+        })
+      }
+    })
   },
   /**
    * 生命周期函数--监听页面加载
