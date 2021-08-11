@@ -1,2 +1,4 @@
-<!--pages/help/help.wxml-->
-<text>pages/help/help.wxml</text>
+<map id="map"  scale="13" latitude="36.266181799" longitude="117.098320899"
+controls="{{controls}}" bindcontroltap="controltap" 
+markers="{{markers}}" bindmarkertap="markertap" bindregionchange="regionchange" 
+show-location style="width: 100%; height: 580px;"></map>
