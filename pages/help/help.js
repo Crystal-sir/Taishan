@@ -1,13 +1,41 @@
-// pages/help/help.js
+// map.js
+let schoolData = require('../../Data/data')
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
     nowLatitude:0,
     nowAltitude:0,
     nowLongitude:0,
+    markers: [
+      // {
+      //   latitude:36.266181799,
+      //   longitude:117.098320899,
+      //   title:"泰山风景区",
+      //   iconPath:"../../image/location.png",
+      //   width:30,
+      //   height:30,
+      //   callout:{
+      //      content:"泰山风景区",
+      //      fontSize:13,
+      //      borderRadius:5,
+      //      borderWidth:2,
+      //      borderColor:'#ccc',
+      //      padding:2,
+      //      display:'BYCLICK'
+      //    }
+      // },
+    ],
+
+    controls: [{
+      id: 1,
+      iconPath: '/images/location.png',
+      position: {
+        left: 0,
+        top:10,
+        width: 40,
+        height: 40
+      },
+      clickable: true
+    }],
   },
   getW(){
     let that=this;
@@ -37,59 +65,61 @@ Page({
       }
     })
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  onReady: function (e) {
+    // 使用 wx.createMapContext 获取 map 上下文 
+    this.mapCtx = wx.createMapContext('myMap')
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  onLoad: function () {
+    console.log('地图定位！')
+    let that = this
+    wx.getLocation({
+        type: 'gcj02', //返回可以用于wx.openLocation的经纬度
+        success:(res)=>{
+          console.log(res)
+            let latitude = res.latitude; 
+            let longitude = res.longitude; 
+            let marker=this.createMarker(res);
+            this.setData({
+                centerX:longitude,
+                centerY:latitude,
+                markers:this.getSchoolMarkers()
+            })
+        }
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  regionchange(e) {
+    console.log(e.type)
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  markertap(e) {
+    console.log(e)
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  controltap(e) {
+    console.log(e.controlId)
+    this.moveToLocation()
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
+  getSchoolMarkers(){
+    let markers=[];
+    for(let item of schoolData){
+      let marker=this.createMarker(item);
+      markers.push(marker)
+    }
+    return markers;
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
+  moveToLocation: function () {
+    this.mapCtx.moveToLocation()
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  createMarker(point){
+    let latitude = point.latitude; 
+    let longitude = point.longitude; 
+    let marker= {
+      iconPath: "/images/location.png",
+      id:point.id || 0,
+      name:point.name || '',
+      latitude: latitude,
+      longitude: longitude,
+      width: 25,
+      height: 48
+    };
+    return marker;
   }
 })

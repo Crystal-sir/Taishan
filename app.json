@@ -2,11 +2,9 @@
   "pages": [
     "pages/path/path",
     "pages/begin/begin",
-    
     "pages/main/main",
     "pages/look/look",
     "pages/help/help",
-    
     "pages/main/weather/weather"
   ],
   "window": {
