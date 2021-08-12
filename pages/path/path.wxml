@@ -1,4 +1,5 @@
 <!--遮罩层-->
+<!--我为了推上去真是煞费苦心啊-->
 <view class='shade' hidden='{{popup}}' bindtap='hidePopup'></view>
 <!--弹窗-->
 <scroll-view class='shade_box popup' hidden='{{popup}}' scroll-y="true">
