@@ -15,7 +15,6 @@
 
 <view class="header-modular" wx:if="{{now}}">
     <!--点击天气图标查看详情-->
-  <image src="/images/help.png" class="help"></image>
 	<navigator url="weather/weather?title=欢迎查询天气">
 	<view class="row">
 		<view class="row location-wrap" bindtap="selectLocation">

@@ -5,15 +5,7 @@
   background-color: aqua;
   padding: 0px;
 }
-.help{
-  width: 80rpx;
-  height: 80rpx;
 
-  position:absolute;
-  top: 3%;
-  right: 4%;
-   
-}
 /*文字轮播图 */
 .swiper_container {
   display: flex;
@@ -179,6 +171,7 @@ page {
   bottom: 20rpx;
   z-index: 2;
 }
+
 
 .poi .title{
   font-size: 32rpx;
