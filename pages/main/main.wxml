@@ -55,23 +55,36 @@
  </swiper>
 </view>
 
-<!--星战动画-->
-<view class="container">
-    <view class="content">
-        <view class="content-word">
-            <view class="content-move">
-                <view class="world">傅番瑞大帅哥，傅番瑞大帅哥，傅番瑞大帅哥，</view>
-                <view class="world">傅番瑞大帅哥，傅番瑞大帅哥，傅番瑞大帅哥，，</view>
-                <view class="world">傅番瑞大帅哥，傅番瑞大帅哥，傅番瑞大帅哥，</view>
-                    <view class="world">傅番瑞大帅哥，傅番瑞大帅哥，傅番瑞大帅哥，</view>
-                    <view class="world">傅番瑞大帅哥，傅番瑞大帅哥，傅番瑞大帅哥，</view>
-                    <view class="world">傅番瑞大帅哥，傅番瑞大帅哥，傅番瑞大帅哥，</view>
-                    <view class="world">傅番瑞大帅哥，傅番瑞大帅哥，傅番瑞大帅哥，</view>
-                    <view class="world">傅番瑞大帅哥，傅番瑞大帅哥，傅番瑞大帅哥，</view>
-                    <view class="world">傅番瑞大帅哥，傅番瑞大帅哥，傅番瑞大帅哥，</view>
-                    <view class="world">傅番瑞大帅哥，傅番瑞大帅哥，傅番瑞大帅哥，</view>
-                    <view class="world">傅番瑞大帅哥，傅番瑞大帅哥，傅番瑞大帅哥，</view>
-                </view>
-            </view>
-        </view>
+<!--景区推荐-->
+<view class="place">
+  <view class="h2"><text>热门景点</text></view>
+  <view class="list">
+    <view class="poi">
+      <image src="cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/zpicture/stone.jpg"></image>
+      <view class="info">
+        <view class="title">探海石</view>
+      </view>
     </view>
+
+    <view class="poi">
+      <image src="cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/zpicture/stone1.jpg" style="padding-left: 15rpx"></image>
+      <view class="info1">
+        <view class="title">五岳独尊</view>
+      </view>
+      </view>
+
+      <view class="poi">
+      <image src="cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/zpicture/stone2.jpg"></image>
+      <view class="info2">
+        <view class="title">碧霞祠</view>
+      </view>
+      </view><view class="poi">
+      <image src="cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/zpicture/stone3.jpg" style="padding-left: 15rpx"></image>
+      <view class="info3">
+        <view class="title">岱宗坊</view>
+      </view>
+      </view>
+  </view>
+</view>
+
+ 
