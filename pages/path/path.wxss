@@ -131,8 +131,8 @@ button{
   margin-top: 20px;
 }
 .help{
-  width: 40rpx;
-  height: 40rpx;
+  width: 80rpx;
+  height: 80rpx;
 
   position:absolute;
   top: 3%;

@@ -30,6 +30,7 @@
         <view wx:for="{{array}}" wx:key="index">
           <image class="{{item.css}}" src="{{item.src}}" data-num="{{item.id}}"></image>
         </view>
+        <text style="position: absolute;top: 20px;right: 20px;">{{mapUrl}}</text>
       </movable-view>
       <image class="help" src="/images/help.png" bindtap="help"></image>
     </movable-area>

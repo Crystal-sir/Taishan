@@ -143,6 +143,7 @@ Page({
   },
   //添加数据库photo信息
   Add(){
+    let that=this;
     wx.cloud.database().collection("photo").add({
       data:{
         fileID:fileid,
@@ -151,6 +152,7 @@ Page({
       },
       success(res){
         console.log(fileid);
+        that.query();//更新photo_array数组
       }
     })
   },

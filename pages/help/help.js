@@ -2,9 +2,6 @@
 let schoolData = require('../../Data/data')
 Page({
   data: {
-    nowLatitude:0,
-    nowAltitude:0,
-    nowLongitude:0,
     markers: [
       // {
       //   latitude:36.266181799,
@@ -24,7 +21,6 @@ Page({
       //    }
       // },
     ],
-
     controls: [{
       id: 1,
       iconPath: '/images/location.png',
@@ -36,34 +32,6 @@ Page({
       },
       clickable: true
     }],
-  },
-  getW(){
-    let that=this;
-    let now={};
-    wx.getSetting({
-      withSubscriptions: true,
-      success(res){
-        console.log(res.authSetting["scope.invoice"]);
-        now=res;
-        console.log(now.authSetting["scope.userLocation"])
-      }
-    })
-    
-    wx.startLocationUpdate({
-      success(res){
-        console.log(res);
-      }
-    })
-    wx.getLocation({
-      success(res){
-        console.log(res);
-        that.setData({
-          nowLatitude:res.latitude,
-          nowAltitude:res.altitude,
-          nowLongitude:res.longitude,
-        })
-      }
-    })
   },
   onReady: function (e) {
     // 使用 wx.createMapContext 获取 map 上下文 
