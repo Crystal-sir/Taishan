@@ -138,12 +138,28 @@ page {
   padding: 0 20rpx;
   margin-bottom: 50rpx;
 }
+.list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  align-items: center;
+  padding: 0 20rpx;
+  margin-bottom: 50rpx;
+}
 .poi{
   color: #fff;
   position: relative;
   margin-bottom: 12rpx;
   display: flex;
   justify-content: space-between;
+}
+.poi image{
+  width: 349rpx;
+  height: 349rpx;
+  border-radius: 8rpx;
+  vertical-align: bottom;
 }
 .poi image{
   width: 349rpx;
@@ -159,7 +175,23 @@ page {
   z-index: 2;
 }
 
+
+
 .poi .info1{
+  position: absolute;
+  left: 42rpx;
+  bottom: 20rpx;
+  z-index: 2;
+}
+
+.poi .info2{
+  position: absolute;
+  left: 28rpx;
+  bottom: 20rpx;
+  z-index: 2;
+}
+
+.poi .info3{
   position: absolute;
   left: 42rpx;
   bottom: 20rpx;
