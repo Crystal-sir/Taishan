@@ -13,13 +13,7 @@
       </view>
     </view>
     <view wx:else>
-      <view class='title'><text>功能详解</text></view>
-      <view class="help-content">
-        <view ><text>1.本页面可以对旅游地点进行打卡哦！</text></view>
-        <view ><text>2.未打卡地点旁边桃花显示为灰色。</text></view>
-        <view><text>3.进行打卡后桃花由灰色变为粉色。</text></view>
-        <view><text>4.当点击已打卡地点的桃花后会弹窗显示历史提交的照片信息，并且可以进行再次提交新照片替换旧照片。</text></view>
-      </view>
+      
     </view>
 </scroll-view>
 
@@ -36,4 +30,45 @@
     </movable-area>
   </scroll-view>
 </view>
-<view style="display: none;">wowowo</view>
+<!--进度条-->
+<view class="pro">
+  <progress active="true" percent="{{jin}}" show-info="true" stroke-width="3" activeColor="#10AEFF">
+    <text>已点亮</text>
+  </progress>
+</view>
+<!--引导页面-->
+<scroll-view class='page-cont' wx:if="{{showHelp}}">
+        <view class='top'>
+         
+        </view>
+        <view class='cont'>
+          <view class='cont-p'>
+            <view class='text'><text>1</text></view>
+            <view>点击</view>
+            <image src='cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/icon_no.jpg'></image>
+          </view>
+          <view class='cont-p'>
+            <view class='text'><text>2</text></view>
+            <view>上传图片并点亮</view>
+            
+          </view>
+          <view class='cont-p'>
+            <view class='text'><text>3</text></view>
+            <view>点击</view>
+            <image src='cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/icon.png'></image>
+          </view>
+          <view class='cont-p'>
+            <view class='text'><text>4</text></view>
+            <view>查看历史上传图片，并可重新上传</view>
+          </view>
+          <view class='cont-p'>
+            <view class='text'><text>5</text></view>
+            <view>点亮全部景点，即可将地图渲染为彩色</view>
+          </view>
+          <view class='cont-p-lib'>
+            <view class='text' style='opacity:0;'><text>3</text></view>
+            <view></view>
+          </view>
+        </view>
+      <view class='bottom' bindtap='hidethis'>记住了  我去试试</view>
+</scroll-view>

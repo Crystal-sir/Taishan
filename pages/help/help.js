@@ -3,23 +3,7 @@ let schoolData = require('../../Data/data')
 Page({
   data: {
     markers: [
-      // {
-      //   latitude:36.266181799,
-      //   longitude:117.098320899,
-      //   title:"泰山风景区",
-      //   iconPath:"../../image/location.png",
-      //   width:30,
-      //   height:30,
-      //   callout:{
-      //      content:"泰山风景区",
-      //      fontSize:13,
-      //      borderRadius:5,
-      //      borderWidth:2,
-      //      borderColor:'#ccc',
-      //      padding:2,
-      //      display:'BYCLICK'
-      //    }
-      // },
+      
     ],
     controls: [{
       id: 1,

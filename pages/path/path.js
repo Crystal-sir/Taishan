@@ -19,19 +19,44 @@ Page({
     userInfo:{},
     hasUserInfo:false,
     canIUseGetUserProfile: false,
-    mapUrl:"cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/map.jpg",
+    /*mapUrl:"cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/map.jpg",*/
+    mapUrl:"cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/map2.jpg",
     array:[],
     mx:"22",//图中有多少个点
     upTime:"",
     showFileId:"",
     location:"",
     showHelp:false,
+    jin:0,
+    
+  },
+  //检查一下是否全部点亮，以备显示点亮后地图
+  check(){
+    let str="";
+    if(photo_array.length==22) str="cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/map.jpg";
+    else str="cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/map2.jpg";
+    this.setData({
+      mapUrl:str,
+    });
+    this.get_jin();
+  },
+  //得到点亮进度
+  get_jin(){
+    let val=photo_array.length/22;
+    this.setData({
+      jin:val*100,
+    })
+  },
+  //隐藏帮助菜单
+  hidethis(){
+    this.setData({
+      showHelp:false,
+    })
   },
   //显示帮助菜单
   help(){
     this.setData({
       showHelp:true,
-      popup:false,
     })
   },
   //点击图片后查看
@@ -46,6 +71,7 @@ Page({
     this.setData({
         "popup": flag,
         showHelp:false,
+        
     });
   },
   /* 显示弹窗 */
@@ -144,6 +170,7 @@ Page({
   //添加数据库photo信息
   Add(){
     let that=this;
+    
     wx.cloud.database().collection("photo").add({
       data:{
         fileID:fileid,
@@ -203,9 +230,11 @@ Page({
   //并将该用户信息更新至静态数组内
   query(e){
     let that=this;
-    wx.cloud.database().collection("photo").get({
+    //云函数
+    wx.cloud.callFunction({
+      name:"Get",
       success(res){
-        photo_array=res.data;//保存图片信息至静态变量
+        photo_array=res.result.data;//保存图片信息至静态变量
         console.log(photo_array);
         //读取用户全部图片信息，并相应修改array数组
         for(let i=0;i<photo_array.length;i++){
@@ -214,15 +243,21 @@ Page({
           that.data.array[v].src="cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/icon.png";
           //切换图片点亮状态
         }
+        //判断用户是否是第一次登录本页面
+        let flag=true;
+        if(photo_array.length!=0) flag=false;
         //将修改后的array重置回array
         that.setData({
           array:that.data.array,
+          showHelp:flag,
         });
+        that.check();//检查是否可以显示点亮后的地图
+
       },
       fail(err){
         console.log(err);
       }
-    });
+    })
   },
   /*
     用户点击一个景点时触发此事件
@@ -263,7 +298,6 @@ Page({
     }
     
     this.query();
-    
   },
 
   /**
