@@ -1,4 +1,0 @@
-/* pages/begin/begin.wxss */
-button{
-  border: 1px solid green;
-}
