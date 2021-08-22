@@ -1,13 +1,30 @@
+<!--pages/help/help.wxml-->
+<view class='shade' hidden='{{popup}}' bindtap='hidePopup'></view>
+<scroll-view class='shade_box popup' hidden='{{popup}}' scroll-y="true">
+  <view class="circle"></view>
+    <view class='title'><text>弹窗：</text></view>
+    <view class='content'>
+      <image class='ima' src="{{showFileId}}" bindtap="look"></image>
+    <view class="text">{{showdescribe}}</view>
+    </view>
+    
+</scroll-view>
 
 <view class="container">
-	<map id="map4select" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" controls="{{controls}}" markers="{{markers}}"
-	 show-location bindcontroltap="controltap" polyline="{{polyline}}" bindmarkertap="markertap"     circles="{{circles}}"
-	 	 bindregionchange="regionchange" class='map'>
-		<cover-image class="cover-image" bindtap="my_location" src="../../static/images/home/icon1.png" />
-	</map>
-		<image src="../../static/images/home/here.png" class="current_location" bindtap="Location"></image>
+  <scroll-view style="height:100%;">
+    <movable-area class="img" scale-area="true">
+      <movable-view direction="all" scale scale-min="1" scale-max="10" scale-value="1" bindtap="getWhere">
+        <image src="{{mapUrl}}"></image>       
+        <view wx:for="{{array}}" wx:key="*this">
+          <image class="{{item.css}}" src="{{item.src}}" data-num="{{item.id}}"></image>         
+        </view>
+        
+      </movable-view>
+    </movable-area>
+  </scroll-view>
+  <view class="Totest">
+  <image src="/images/icon.png"  bindtap="gototest"></image>
+</view>
+  
 </view>
 
-<view class="container">
-	<view>距离山顶距离：{{disKm}}</view>
-</view>

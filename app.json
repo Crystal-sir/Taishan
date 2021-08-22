@@ -1,9 +1,11 @@
 {
   "pages": [
+
     "pages/path/path",
     "pages/begin/begin",
     "pages/main/main",
     "pages/look/look",
+    "pages/look/test/test",
     "pages/help/help",
     "pages/main/weather/weather"
   ],
