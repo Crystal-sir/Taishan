@@ -1,9 +1,7 @@
 {
   "pages": [
-
-    "pages/path/path",
-    "pages/begin/begin",
     "pages/main/main",
+    "pages/path/path",
     "pages/look/look",
     "pages/look/test/test",
     "pages/help/help",
@@ -11,7 +9,7 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#eee",
+    "navigationBarBackgroundColor": "#eeee",
     "navigationBarTitleText": "泰山伴旅",
     "navigationBarTextStyle": "black"
   },

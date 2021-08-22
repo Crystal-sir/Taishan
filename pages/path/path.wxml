@@ -1,25 +1,74 @@
 <!--遮罩层-->
+<!--我为了推上去真是煞费苦心啊-->
 <view class='shade' hidden='{{popup}}' bindtap='hidePopup'></view>
 <!--弹窗-->
 <scroll-view class='shade_box popup' hidden='{{popup}}' scroll-y="true">
-    <view class='title'><text>打卡历史</text></view>
-    <view class='content'>
-      <image class='ima' src="{{showFileId}}" bindtap="look"></image>
-      <view class="text">{{location}}</view>
-      <view class="time">{{upTime}}上传</view>
-      <button bindtap="do">上传新图片</button>
+    <view wx:if="{{!showHelp}}">
+      <view class='title'><text>打卡历史</text></view>
+      <view class='content'>
+        <image class='ima' src="{{showFileId}}" bindtap="look"></image>
+        <view class="text">{{location}}</view>
+        <view class="time">{{upTime}}上传</view>
+        <button bindtap="do">上传新图片</button>
+      </view>
+    </view>
+    <view wx:else>
+      
     </view>
 </scroll-view>
 
 <view class="container">
   <scroll-view style="height:100%;">
     <movable-area class="img" scale-area="true">
-      <movable-view direction="all" scale scale-min="1" scale-max="10" scale-value="1" bindtap="getWhere">
+      <movable-view direction="all" scale scale-min="1" scale-max="10" scale-value="1" bindtap="getWhere" out-of-bounds="true">
         <image src="{{mapUrl}}"></image>
         <view wx:for="{{array}}" wx:key="index">
           <image class="{{item.css}}" src="{{item.src}}" data-num="{{item.id}}"></image>
         </view>
       </movable-view>
+      <image class="help" src="/images/help.png" bindtap="help"></image>
     </movable-area>
   </scroll-view>
 </view>
+<!--进度条-->
+<view class="pro">
+  <progress active="true" percent="{{jin}}" show-info="true" stroke-width="3" activeColor="#10AEFF">
+    <text>已点亮</text>
+  </progress>
+</view>
+<!--引导页面-->
+<scroll-view class='page-cont' wx:if="{{showHelp}}">
+        <view class='top'>
+         
+        </view>
+        <view class='cont'>
+          <view class='cont-p'>
+            <view class='text'><text>1</text></view>
+            <view>点击</view>
+            <image src='cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/icon_no.jpg'></image>
+          </view>
+          <view class='cont-p'>
+            <view class='text'><text>2</text></view>
+            <view>上传图片并点亮</view>
+            
+          </view>
+          <view class='cont-p'>
+            <view class='text'><text>3</text></view>
+            <view>点击</view>
+            <image src='cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/icon.png'></image>
+          </view>
+          <view class='cont-p'>
+            <view class='text'><text>4</text></view>
+            <view>查看历史上传图片，并可重新上传</view>
+          </view>
+          <view class='cont-p'>
+            <view class='text'><text>5</text></view>
+            <view>点亮全部景点，即可将地图渲染为彩色</view>
+          </view>
+          <view class='cont-p-lib'>
+            <view class='text' style='opacity:0;'><text>3</text></view>
+            <view></view>
+          </view>
+        </view>
+      <view class='bottom' bindtap='hidethis'>记住了  我去试试</view>
+</scroll-view>
