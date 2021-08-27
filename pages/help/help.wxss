@@ -1,3 +1,12 @@
+/* 地图100%显示 */
+page{
+	height: 100%;
+}
+.disKm{
+  float: right;
+  padding: 15rpx;
+}
+
 .box {
   text-align: center;
   line-height: 0.1rpx;
@@ -11,6 +20,7 @@
 .box>image {
   width: 64rpx;
   height: 55rpx;
+  padding: 14rpx;
 }
 /* .box>span{
   display: block;
@@ -20,10 +30,10 @@
 
   display: flex;
   justify-content: space-between;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   width: 125rpx;
-  height: 500rpx;
+  height: 700rpx;
   border-radius: 15px;
   position:absolute;
   top: 120rpx;
@@ -38,38 +48,14 @@
   color: transparent;
 }
 
-.top-swich-btn {
-  background-color: none;
-  letter-spacing: 3rpx;
-  height: 65rpx;
-  color: #fff;
-  font-size: 30rpx;
-}
-
-.active {
-  border-bottom: solid white;
-  height: 50rpx;
-  display: inline-block;
-}
-
-button {
-  font-size: 26rpx;
-  height: 6vh;
-}
-
-.img-view {
-  height: 100%;
-  display: flex;
-}
-
-.img0 {
+/* .img0 {
   width: 80rpx;
   height: 80rpx;
   display: flex;
   position:absolute;
   bottom: 220rpx;
   right:20rpx;
-}
+} */
 .img1 {
   width: 80rpx;
   height: 80rpx;
@@ -85,80 +71,33 @@ button {
   margin: auto 7rpx;
 }
 
-.item {
-  display: flex;
-  flex-direction: column;
-  margin: auto 0;
-}
 
-.itemName {
-  margin: 0 20rpx;
-  font-size: 32rpx;
-}
 
-.itemFloor {
-  margin: 0 20rpx;
-  font-size: 28rpx;
-  color: #555;
-}
-
-.text {
-  margin: auto 15px;
-  width: 13%;
-}
-
-.text image {
-  width: 70rpx;
-  height: 70rpx;
-}
-
-.controls {
-  position: relative;
-  top: 65%;
-  left: 85%;
-  /* display: flex; */
-}
-
-.controls .img {
-  margin-top: 5px;
-  width: 80rpx;
-  height: 80rpx;
-}
-
-.full {
-  top: 82%;
-}
-
-.chatroom{
-  display: flex;
+/* 弹窗 */
+.zan-dialog__mask {position: fixed;top: 0; left: 0;right: 0;bottom: 0;background: rgba(0, 0, 0, 0); background: rgba(0, 0, 0, 0.4);display: none;z-index: 1001}
   
-  flex-direction: column;
+.zan-dialog__container {position: fixed; bottom: 0;width: 100%;left: 0;right: 0;overflow: hidden;border-top-left-radius: 40rpx;
+    box-shadow: darkgrey 0rpx 5rpx 15rpx 8rpx;z-index: 1003;
+    background: #f8f8f8; margin: 0 auto;transform: translateY(300%);transition: all 0.4s ease;border-top-right-radius: 30rpx;}
   
-  width: 110rpx;
-  height: 100rpx;
-  
-  position:absolute;
-  top: 10rpx;
-  right:1rpx;
-}
+.zan-dialog--show .zan-dialog__container {transform: translateY(0);}
+.zan-dialog--show .zan-dialog__mask {display: block;}
 
-.navigatorstyle{
-  width: 33.3%;
-  height: 20px;
-  font-size: 16px;
-  color:black;
+.b_line{margin: 0 20rpx;}
+.b_line .line{width: 40%;height: 25rpx;margin: 0 auto;background-color: #eee;border-radius: 25rpx;margin-top: 30rpx;}
+.b-adder text{font-size: 32rpx;color: #808080;margin-left: 10rpx;}
 
-  border-style: solid;
-  border-width: 0.5rpx;
-  border-color:rgb(114, 113, 113) ;
-}
-.main-info{
- background-color: orange;
-}
-.main-info .textstyle{
-  font-size: 16px;
+.content{padding: 40rpx 20rpx; display: flex;justify-content: space-between;align-items: center;}
 
-}
-.main-info .number{
-  color: green;
-}
+.zan-img{width: 50%;vertical-align: bottom;height: 230rpx;border-radius: 8rpx}
+.content .tips{width: 46%}
+
+.tips .adder{font-size: 28rpx;color: #808080;padding: 10rpx 0;}
+
+.tips .price{display: flex;justify-content: space-between;align-items: center;} 
+.price .jiage{font-size: 28rpx;color: #ff7428}
+.juli text{font-size: 28rpx;color: #0be200;}
+
+
+.viewlittle{width: 60rpx;height: 60rpx;overflow: hidden;background-color: #fff;position: fixed;bottom: 50rpx;right: 20rpx;display: flex;justify-content: center;align-items: center;border-radius: 8rpx;z-index: 1002}
+.viewlittle image{width: 50rpx;height: 50rpx;vertical-align: bottom;}
