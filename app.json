@@ -1,9 +1,11 @@
 {
   "pages": [
-    "pages/path/path",
     "pages/main/main",
+    "pages/path/path",
     "pages/look/look",
+    "pages/look/test/test",
     "pages/help/help",
+    "pages/info/info",
     "pages/main/weather/weather"
   ],
   "window": {

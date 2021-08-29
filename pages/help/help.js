@@ -236,6 +236,7 @@ var map= [
         id: 11,
         "longitude": "117.071533877",
         "latitude": "36.273183264",
+        "showDialog": false,
         "iconPath": "/image/location.png",
         "width": "30",
         "height": "30",
@@ -886,13 +887,113 @@ var map= [
           fontSize: 12,
           borderRadius:30,
           display:"BYCLICK"},
-        "img": [
-          ""
-        ],
-        "description": "",
-      }
+          "img": [
+            ""
+          ],
+          "description": ""
+        },
+      {
+        "name": "后石坞索道售票处",
+        id: 2,
+        "latitude": "36.25962798",
+        "longitude": "117.106804",
+        "iconPath": "/image/ticket.png",
+        "width": "30",
+        "height": "30",
+        callout: {padding:2,
+          content:"后石坞索道售票处",
+          bgColor:"#FFFFFf",
+          color:"#000000",
+          fontSize: 12,
+          borderRadius:30,
+          display:"BYCLICK"},
+          "img": [
+            ""
+          ],
+          "description": ""
+        },
+        {
+          "name": "桃花源索道售票处",
+          id: 3,
+          "latitude": "36.257880899",
+          "longitude": "117.10444045",
+          "iconPath": "/image/ticket.png",
+          "width": "30",
+          "height": "30",
+          callout: {padding:2,
+            content:"桃花源索道售票处",
+            bgColor:"#FFFFFf",
+            color:"#000000",
+            fontSize: 12,
+            borderRadius:30,
+            display:"BYCLICK"},
+            "img": [
+              ""
+            ],
+            "description": ""
+          },
+          {
+            "name": "桃花源索道售票处",
+            id: 4,
+            "latitude": "36.254798982",
+            "longitude": "117.080873472",
+            "iconPath": "/image/ticket.png",
+            "width": "30",
+            "height": "30",
+            callout: {padding:2,
+              content:"桃花源索道售票处",
+              bgColor:"#FFFFFf",
+              color:"#000000",
+              fontSize: 12,
+              borderRadius:30,
+              display:"BYCLICK"},
+              "img": [
+                ""
+              ],
+              "description": ""
+            },
+            {
+              "name": "天烛峰售票处",
+              id: 5,
+              "latitude": "36.265436799",
+              "longitude": "117.139983899",
+              "iconPath": "/image/ticket.png",
+              "width": "30",
+              "height": "30",
+              callout: {padding:2,
+                content:"天烛峰售票处",
+                bgColor:"#FFFFFf",
+                color:"#000000",
+                fontSize: 12,
+                borderRadius:30,
+                display:"BYCLICK"},
+                "img": [
+                  ""
+                ],
+                "description": ""
+              },
+              {
+                "name": "售票处(罗汉崖)",
+                id: 6,
+                "latitude": "36.212930521",
+                "longitude": "117.128366734",
+                "iconPath": "/image/ticket.png",
+                "width": "30",
+                "height": "30",
+                callout: {padding:2,
+                  content:"售票处(罗汉崖)",
+                  bgColor:"#FFFFFf",
+                  color:"#000000",
+                  fontSize: 12,
+                  borderRadius:30,
+                  display:"BYCLICK"},
+                  "img": [
+                    ""
+                  ],
+                  "description": ""
+                }
     ]
-  }
+  },
 ]
 
 
@@ -977,6 +1078,28 @@ Page({
   //   })
   // },
 //定位
+// 距离 
+onLoad: function() { 
+  var that = this; 
+  wx.getLocation({ 
+      type: "gcj02", 
+      altitude:true,
+      success: (res)=>  { 
+              const latitude = res.latitude; 
+            const longitude = res.longitude; 
+            const altitude=res.altitude;
+              const resKm = that.getDistance(latitude,longitude,36.15,117.06); 
+              that.setData({ 
+                  // latitude: res.latitude, 
+        // longitude: res.longitude, 
+        // markers: this.getLingyuanMarkers(), 
+        disKm:resKm ,
+        alt:altitude
+        
+          }) 
+      } 
+  }) 
+}, 
   dingwei:function(){
     var that=this;
   wx.getLocation({
@@ -1025,4 +1148,127 @@ Page({
   //     url: '/pages/chat/chat',
   //      })
   //     },
+  // 点击标点获取数据
+  // markertap(e) {
+  //   var id = e.markerId
+  //   var name = this.data.markers[id - 1].name
+  //   var latitude = this.data.buildlData.name
+  //   console.log(name)
+  //   console.log(latitude)
+  //   this.setData({
+  //     lingyuanName: name,
+  //     latitude:latitude,
+  //     showDialog: true,
+  //   })
+  // },
+  
+  // getLingyuanMarkers() {
+  //   let buildlData = map;
+  //   for (let item of lingyuanData) {
+  //     let marker = this.createMarker(item);
+  //     markers.push(marker)
+  //   }
+  //   return buildlData;
+  // },
+
+	rad (d) {//弧度转化
+    return d * Math.PI / 180.0;
+	},
+	//计算当前位置与山顶距离，其中山顶位置为玉皇极的位置.
+  getDistance(lat1, lng1, lat2, lng2) {
+    var radLat1 = this.rad(lat1);
+    var radLat2 = this.rad(lat2);
+    var a = radLat1 - radLat2;
+    var b = this.rad(lng1) - this.rad(lng2);
+    var s = 2 * Math.asin(Math.sqrt(Math.pow(Math.sin(a / 2), 2) +
+    Math.cos(radLat1) * Math.cos(radLat2) * Math.pow(Math.sin(b / 2), 2)));
+    s = s * 6378.137; // EARTH_RADIUS;
+    s = Math.round(s * 10000) / 10000; //输出为公里
+
+    var distance = s;
+    var distance_str = "";
+
+    if (parseInt(distance) >= 1) {
+      distance_str = distance.toFixed(2) + "km";
+    } else {
+      distance_str = distance * 1000 + "m";
+    }
+    //s=s.toFixed(4);
+
+    console.info('距离是', s);
+    console.info('距离是', distance_str);
+    return distance_str;
+  },
+
+//定位
+  dingwei:function(){
+    var that=this;
+  wx.getLocation({
+   type: 'wgs84',
+   altitude: true,
+   success: function(res) {
+     console.log(res);
+    that.setData({
+     latitude:res.latitude,
+     scale:16,
+     longitude:res.longitude
+    })
+   //console.log(res.latitude)
+   // console.log(res.longitude)
+   }
+  })
+},
+//展示标志点
+  changePage: function (event) {
+    
+    this.setData({
+      currentItemId:event.currentTarget.dataset.num,
+      isSelectedBuildType: event.currentTarget.dataset.num-1,
+      longitude:map[event.currentTarget.dataset.num-1].longitude,
+      latitude:map[event.currentTarget.dataset.num-1].latitude,
+      scale: 16,
+    });
+    
+  },
+//标记跳转  新页面
+
+  // markertap(res) {
+	// 	// var that = this;
+  
+  //   var mark=res.currentTarget.dataset.num;
+  //   var markerId=res.detail.markerId;
+  //   // console.log(mark)
+  //   // const longitude = map[res.currentTarget.dataset.num-1].longitude;
+  //   // const latitude = map[res.currentTarget.dataset.num-1].latitude;
+	// 	// const resKm = that.getDistance(latitude,longitude,36.15,117.06);
+    
+  //   let temp=JSON.stringify(mark[markerId])//作用是把数组转变成可以在网页传递中的参数进行传递
+
+  //   // this.setData({
+  //   //       lingyuanName: temp,
+  //   //       disKm:resKm,
+  //   //       showDialog: true,
+  //   //     })
+  //       wx.navigateTo({
+  //         url: "/pages/info/info?mar="+temp,
+  //       })
+  //   },
+
+// 点击标点获取数据 底部弹框
+  markertap(res) {
+    var mark=res.currentTarget.dataset.num;
+    var markerId=res.detail.markerId;
+    let temp=JSON.stringify(mark[markerId])//作用是把数组转变成可以在网页传递中的参数进行传递
+    console.log(mark)
+    this.setData({
+      lingyuanName: markerId,
+      showDialog: true,
+    })
+  },
+  toggleDialog: function () {
+    this.setData({
+      showDialog: false,
+    })
+  },
+
 })
