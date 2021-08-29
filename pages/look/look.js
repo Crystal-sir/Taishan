@@ -10,16 +10,20 @@ Page({
    */
   data: {
     popup:true,
+    showModalStatus: false,
     userInfo:{},
     hasUserInfo:false,
     canIUseGetUserProfile: false,
-    mapUrl:"cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/map.jpg",
+    mapUrl:"cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/endlook.jpg",
     array:[],
-    mx:"22",//图中有多少个点
+    mx:"26",//图中有多少个点
     showdescribe:"",
+    showname:"",
     showFileId:"",
     location:"",
   },
+
+  
   //点击图片后查看
   look(e){
     let that=this;
@@ -74,6 +78,9 @@ getLoc(){
       case 19:res="玉皇顶";break;
       case 20:res="天烛峰";break;
       case 21:res="天外村";break;
+      case 22:res="龙潭水库";break;
+      case 23:res="白龙池";break;
+      case 24:res="竹林禅寺";break;
       //case 22:res="中天门";break;
   }
   return res;
@@ -85,6 +92,7 @@ show(){
       this.setData({
         showFileId:photo_array[i].fileID,
         showdescribe:photo_array[i].describe,
+        showname:photo_array[i].name,
       });
       break;
     }
@@ -163,6 +171,99 @@ query(e){
     this.query();
   },
 
+  /* 路线查看图标动画*/
+  moreBtn: function () {
+    this.plus();
+  },
+  //点击弹出
+  plus: function () {
+    if (!this.data.isPopping) {
+      //弹出
+      this.popp();
+      this.setData({
+        isPopping: true
+      })
+      }
+    else {
+  
+      //缩回
+      this.takeback();
+      this.setData({
+        isPopping: false
+      });
+      // console.log("弹出")
+    }
+  },
+  input: function () {
+    wx.navigateTo({ url: '/pages/look/hongmen/hongmen', })
+  },
+  transpond: function () {
+    wx.navigateTo({ url: '/pages/look/tianwai/tianwai', })
+  },
+  collect: function () {
+    wx.navigateTo({ url: '/pages/look/taohua/taohua', })
+  },
+  
+  //弹出动画
+  popp: function () {
+    //plus顺时针旋转
+    let animationPlus = wx.createAnimation({
+      duration: 500,
+      timingFunction: 'ease'
+    })
+    let animationcollect = wx.createAnimation({
+      duration: 500,
+      timingFunction: 'ease'
+    })
+    let animationTranspond = wx.createAnimation({
+      duration: 500,
+      timingFunction: 'ease'
+    })
+    let animationInput = wx.createAnimation({
+      duration: 500,
+      timingFunction: 'ease'
+    })
+    animationPlus.rotateZ(10).step();
+    animationcollect.translate(10, 50).rotateZ(0).opacity(1).step();
+    animationTranspond.translate(40, -39).rotateZ(0).opacity(1).step();
+    animationInput.translate(40, 5).rotateZ(0).opacity(1).step();
+    this.setData({
+      animPlus: animationPlus.export(),
+      animCollect: animationcollect.export(),
+      animTranspond: animationTranspond.export(),
+      animInput: animationInput.export(),
+    })
+  },
+  //收回动画
+  takeback: function () {
+    //plus逆时针旋转
+    let animationPlus = wx.createAnimation({
+      duration: 500,
+      timingFunction: 'ease'
+    })
+    let animationcollect = wx.createAnimation({
+      duration: 500,
+      timingFunction: 'ease'
+    })
+    let animationTranspond = wx.createAnimation({
+      duration: 500,
+      timingFunction: 'ease'
+    })
+    let animationInput = wx.createAnimation({
+      duration: 500,
+      timingFunction: 'ease'
+    })
+    animationPlus.rotateZ(0).step();
+    animationcollect.translate(0, 0).rotateZ(0).opacity(0).step();
+    animationTranspond.translate(0, 0).rotateZ(0).opacity(0).step();
+    animationInput.translate(0, 0).rotateZ(0).opacity(0).step();
+    this.setData({
+      animPlus: animationPlus.export(),
+      animCollect: animationcollect.export(),
+      animTranspond: animationTranspond.export(),
+      animInput: animationInput.export(),
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -210,7 +311,8 @@ query(e){
    */
   onShareAppMessage: function () {
 
-  }
-	
-
+  },
+ gototest:function(){
+  wx.navigateTo({ url: '/pages/look/test/test', })
+}
 })

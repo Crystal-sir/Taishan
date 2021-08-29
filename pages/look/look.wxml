@@ -1,11 +1,11 @@
 <!--pages/help/help.wxml-->
+ 
 <view class='shade' hidden='{{popup}}' bindtap='hidePopup'></view>
 <scroll-view class='shade_box popup' hidden='{{popup}}' scroll-y="true">
-  <view class="circle"></view>
-    <view class='title'><text>弹窗：</text></view>
+<view class="title">{{showname}} </view>
     <view class='content'>
       <image class='ima' src="{{showFileId}}" bindtap="look"></image>
-    <view class="text">{{showdescribe}}</view>
+    <view >{{showdescribe}}</view>
     </view>
     
 </scroll-view>
@@ -22,8 +22,13 @@
       </movable-view>
     </movable-area>
   </scroll-view>
-  <view class="Totest">
-  <image src="/images/icon.png"  bindtap="gototest"></image>
+
+  <view>
+    <image src="/images/taohuayv1.png" class="img-style" animation="{{animCollect}}" bindtap="collect"></image>
+    <image src="/images/tianwaicun1.png" class="img-style" animation="{{animTranspond}}" bindtap="transpond"></image>
+    <image src="/images/hongmen1.png" class="img-style" animation="{{animInput}}" bindtap="input"></image>
+    <image src=" /images/jingling.png" class="img-plus-style" animation="{{animPlus}}" catchtap="moreBtn"></image>
+
 </view>
   
 </view>

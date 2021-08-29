@@ -1,0 +1,20 @@
+<!--pages/look/taohua/taohua.wxml-->
+<view>
+<block wx:for-items="{{list}}" wx:key="{{item.id}}">
+  <view>
+  <view class="head">{{item.name}}</view>
+  <image src='/images/tai.jpeg'></image>
+</view>
+    <view>
+        <view class="minhead">路线概述</view>
+          <view class="kind-list-text">{{item.describe}}</view>
+          <view class="divLine"></view>
+          <view class="minhead">沿途景点</view>
+          <view class="kind-list-text">{{item.path}}</view>
+          <view class="divLine"></view>
+          <view class="minhead">温馨提示</view>
+          <view class="kind-list-text">{{item.method}}</view>
+          <view class="divLine"></view>
+   </view>
+  </block>
+</view>

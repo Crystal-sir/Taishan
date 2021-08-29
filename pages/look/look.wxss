@@ -42,13 +42,13 @@ movable-view{
   z-index: 10;
 }
 .shade_box {
-  position: fixed;
+  position:fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   margin: auto;
-  z-index: 11;
+  z-index: 100;
   min-width: 200rpx;
   min-height: 200rpx;
   font-size: 28rpx;
@@ -77,23 +77,25 @@ movable-view{
 /* 当前弹窗样式 */
 .popup{
   width: 600rpx;
-  height: 600rpx;
-  background-color: #f1a36f;
+  height: 800rpx;
+  background-color: #ffffff;
+ 
 }
 .popup .title{
-  padding: 0 20rpx;
-  border-bottom: #f1a36f solid 1px;
+  padding: 20rpx;
+  border-bottom: #294221 solid 1px;
   height: 70rpx;
-  line-height: 70rpx;
-  font-size: 32rpx;
-  background-color: #f1a36f;
+  line-height: 100rpx;
+  font-size: 42rpx;
+  text-align: center;
+  background-color: #eef8ea;
 }
 .popup .content{
   margin-left:50rpx;
   margin-right: 50rpx;
-  font-size: 40rpx;
+  font-size: 28rpx;
   text-align: center;
-  color: #ffffff;
+  color: #000000c9;
 }
 .popup .content .ima{
 
@@ -101,185 +103,229 @@ width:400rpx;
 height: 300rpx;
 border-radius: 5px;
 margin-bottom: 20rpx;
+margin-top: 40rpx;
 }
-
+.circle {
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  -moz-border-radius: 60px;
+  -webkit-border-radius: 60px;
+  border-radius: 50px;
+  position: absolute;
+  top: -50rpx;
+  left: 235rpx;
+  z-index: 2000 !important
+  
+}
 /*小花样式*/
 .p0{
   
   width: 40rpx;
   height: 40rpx;
-
   position: absolute;
-  bottom: 9%;
-  right: 2%;
+  bottom: 10%;
+  right: 27%;
 }
 .p1{
   width: 40rpx;
   height: 40rpx;
 
   position:absolute;
-  right: 8%;
-  bottom: 10%;
+  right: 23%;
+  bottom: 19%;
 }
 .p2{
   width: 40rpx;
   height: 40rpx;
 
   position:absolute;
-  right: 29%;
-  bottom: 10%;
+  right: 35%;
+  bottom: 17%;
 }
 .p3{
   width: 40rpx;
   height: 40rpx;
 
   position:absolute;
-  right: 7%;
-  bottom: 20%;
+  right: 35%;
+  bottom: 24%;
 }
 .p4{
   width: 40rpx;
   height: 40rpx;
 
   position:absolute;
-  right: 38%;
-  bottom: 13%;
+  right: 48%;
+  bottom: 29%;
 }
 .p5{
   width: 40rpx;
   height: 40rpx;
 
   position:absolute;
-  right: 41%;
-  bottom: 19%;
+  right: 36%;
+  bottom: 36%;
 }
 .p6{
   width: 40rpx;
   height: 40rpx;
 
   position:absolute;
-  right: 17%;
-  bottom: 22%;
+  right: 43%;
+  bottom: 44%;
 }
 .p7{
   width: 40rpx;
   height: 40rpx;
 
   position:absolute;
-  right: 37%;
-  bottom: 25%;
+  right: 14%;
+  bottom: 43%;
 }
 .p8{
   width: 40rpx;
   height: 40rpx;
 
   position:absolute;
-  right: 37%;
-  bottom: 36%;
+  right:37%;
+  bottom: 43%;
 }
 .p9{
   width: 40rpx;
   height: 40rpx;
 
   position:absolute;
-  right: 48%;
-  bottom: 35%;
+  right: 40%;
+  bottom: 50%;
 }
 .p10{
   width: 40rpx;
   height: 40rpx;
 
   position:absolute;
-  right: 61%;
-  bottom: 42%;
+  right: 40%;
+  bottom: 59%;
 }
 .p11{
   width: 40rpx;
   height: 40rpx;
 
   position:absolute;
-  left: 19%;
-  top: 42%;
+  left: 28%;
+  top: 44%;
 }
 .p12{
   width: 40rpx;
   height: 40rpx;
 
   position:absolute;
-  left: 56%;
-  top: 37%;
+  left: 22%;
+  top: 48%;
 }
 .p13{
   width: 40rpx;
   height: 40rpx;
 
   position:absolute;
-  left: 15%;
-  top: 36%;
+  left: 18%;
+  top: 52%;
 }
 .p14{
   width: 40rpx;
   height: 40rpx;
 
   position:absolute;
-  left: 33%;
-  top: 28%;
+  left: 14%;
+  top: 57%;
 }
 .p15{
   width: 40rpx;
   height: 40rpx;
 
   position:absolute;
-  right: 22%;
-  top: 55%;
+  right: 59%;
+  top: 41%;
 }
 .p16{
   width: 40rpx;
   height: 40rpx;
 
   position:absolute;
-  right: 33%;
-  top: 48%;
+  right: 28%;
+  top: 29%;
 }
 .p17{
   width: 40rpx;
   height: 40rpx;
 
   position:absolute;
-  right: 12%;
-  top: 50%;
+  right: 25%;
+  top: 23%;
 }
 .p18{
   width: 40rpx;
   height: 40rpx;
 
   position:absolute;
-  right: 8%;
-  top: 38%;
+  right: 25%;
+  top: 19%;
 }
 .p19{
   width: 40rpx;
   height: 40rpx;
 
   position:absolute;
-  right: 22%;
-  top: 24%;
+  right: 16%;
+  top: 15%;
 }
 .p20{
   width: 40rpx;
   height: 40rpx;
 
   position:absolute;
-  right: 22%;
-  top: 12%;
+  right: 5%;
+  top: 18%;
 }
 .p21{
   width: 40rpx;
   height: 40rpx;
 
   position: absolute;
-  bottom: 10%;
+  bottom: 12%;
+  left: 25%;
+}
+.p22{
+  width: 40rpx;
+  height: 40rpx;
+
+  position: absolute;
+  bottom: 28%;
+  left: 28%;
+}
+.p23{
+  width: 40rpx;
+  height: 40rpx;
+
+  position: absolute;
+  bottom: 32%;
   left: 38%;
+}
+.p24{
+  width: 40rpx;
+  height: 40rpx;
+
+  position: absolute;
+  bottom: 38%;
+  left: 42%;
+}
+.p25{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  bottom: 33%;
+  right: 32%;
 }
 .Totest{
   width: 80rpx;
@@ -287,4 +333,24 @@ margin-bottom: 20rpx;
   position: absolute;
   top: 5%;
   left: 10%;
+}
+/* 路线查看图标*/
+.img-plus-style {
+  height: 150rpx;
+  width: 150rpx;
+  position: absolute;
+  top: 5%;
+  left: 8%;
+  z-index: 5;
+}
+
+
+
+.img-style {
+  height: 80rpx;
+  width: 80rpx;
+  position: fixed;
+  top: 10%;
+  left: 20%;
+  opacity: 0;
 }

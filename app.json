@@ -1,8 +1,12 @@
 {
   "pages": [
+    "pages/look/look",
+    "pages/look/hongmen/hongmen",
+    "pages/look/taohua/taohua",
+    "pages/look/tianwai/tianwai",
+    
     "pages/main/main",
     "pages/path/path",
-    "pages/look/look",
     "pages/look/test/test",
     "pages/help/help",
     "pages/main/weather/weather"
