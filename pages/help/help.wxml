@@ -1,68 +1,71 @@
 <!-- 地图页面 -->
-<view style="width: 100%;">
-<map longitude="{{longitude}}" style="width: 100%; height: 600px;" latitude="{{latitude}}"
+<!-- <view style="width: 100%; height: 100%;"> -->
+  <map longitude="{{longitude}}" style="width: 100%; height: 100%;" show-location latitude="{{latitude}}"
   scale="{{buildlData[isSelectedBuildType].scale}}" markers="{{buildlData[isSelectedBuildType].data}}"
   bindmarkertap="markertap" label="{{buildlData[isSelectedBuildType].name}}" id="map"
   data-num="{{buildlData[isSelectedBuildType].data}}">
+
+  <view class="disKm">
+    <view>离山顶距离</view>
+    {{disKm}}
+  </view>
+
 </map>
 
+
 <!-- 定位真机调试准确 -->
-<cover-view class="img0">
-  <cover-image bindtap="dingwei" src="/image/all.png">
+<!-- 泰山景区全览 定位泰山风景区-->
+<!-- <cover-view class="img0">
+  <cover-image bindtap="changePage" wx:key="fId" data-num="{{item.fId}}" src="/image/all.png">
   </cover-image>
-</cover-view>
+</cover-view> -->
+<!-- <view wx:for="{{buildlData}}" class="img0">
+
+    <view data-num="{{item.fId}}" class="box"
+      bindtap="changePage">
+
+      <image src="/image/all.png"></image>
+      <view >{{item.name}}</view>
+
+    </view>
+  </view> -->
+<!-- 当前位置 -->
 <cover-view class="img1">
   <cover-image bindtap="dingwei" src="/image/mine.png">
   </cover-image>
 </cover-view>
 
 
-<scroll-view scroll-x="true" scroll-into-view="focusPointId" class="top-swich">
+<scroll-view scroll-y="true" scroll-into-view="focusPointId" class="top-swich">
 
-  <view wx:for="{{buildlData}}" wx:key="id" id="{{index}}">
+  <view wx:for="{{buildlData}}" wx:key="id" id="{{index}}" >
     <!-- style    的作用是用来进行点击变色的 -->
     <!-- data-num 的作用是在'changePage'中传递过去的参数num -->
     <view style="color:{{item.fId==currentItemId?'#025e16':'#000'}}" data-num="{{item.fId}}" class="box"
       bindtap="changePage">
 
       <image src="{{item.iconPath}}"></image>
-      <view>{{item.name}}</view>
+      <view >{{item.name}}</view>
 
     </view>
+
   </view>
 </scroll-view>
 
-
-
-  <map longitude="{{longitude}}" style="width: 100%; height: 600px;" latitude="{{latitude}}"
-    scale="{{buildlData[isSelectedBuildType].scale}}" markers="{{buildlData[isSelectedBuildType].data}}"
-    bindmarkertap="markertap" label="{{buildlData[isSelectedBuildType].name}}" id="map"
-    data-num="{{buildlData[isSelectedBuildType].data}}">
-  </map>
-
-  <!-- 定位真机调试准确 -->
-  <cover-view class="img0">
-    <cover-image bindtap="dingwei" src="/image/all.png">
-    </cover-image>
-  </cover-view>
-  <cover-view class="img1">
-    <cover-image bindtap="dingwei" src="/image/mine.png">
-    </cover-image>
-  </cover-view>
-
-
-  <scroll-view scroll-x="true" scroll-into-view="focusPointId" class="top-swich">
-
-    <view wx:for="{{buildlData}}" wx:key="id" id="{{index}}">
-      <!-- style    的作用是用来进行点击变色的 -->
-      <!-- data-num 的作用是在'changePage'中传递过去的参数num -->
-      <view style="color:{{item.fId==currentItemId?'#025e16':'#000'}}" data-num="{{item.fId}}" 
-       class="box" bindtap="changePage">
-
-        <image src="{{item.iconPath}}"></image>
-        <view>{{item.name}}</view>
+<!-- 弹窗 -->
+<view class="zan-dialog {{ showDialog ? 'zan-dialog--show' : '' }}" >
+  <view class="zan-dialog__mask" bindtap="toggleDialog" />
+    <!-- 内容 -->
+    <view class="zan-dialog__container">
+        <view class="content">
+            <view class="tips">
+              <view class="lingyuanName">{{lingyuanName}}</view>
+                
+            </view>
+        </view>
+        
     </view>
-    </view>
-    </scroll-view>
 </view>
 
+
+<!-- </view> -->
