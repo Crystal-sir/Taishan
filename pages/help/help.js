@@ -250,7 +250,7 @@ var map= [
           "img": [
             ""
           ],
-          "description": ""
+          "description": "红雨川内幽深静谧，别有洞天。玄门、牛角洞、阳元石、混沌石林立其间，彩带坪如同一幅飘落在青山绿水之中的锦绣绸缎。每逢孟春时节，此处漫山遍野的桃花次第开放，红成一片，落英缤纷，桃花满川，胜似唐诗“桃花乱落如红雨”的意境，故称 “红雨川”。"
         },
       {
         "name": "彩石溪",
@@ -1255,16 +1255,55 @@ onLoad: function() {
   //   },
 
 // 点击标点获取数据 底部弹框
-  markertap(res) {
-    var mark=res.currentTarget.dataset.num;
-    var markerId=res.detail.markerId;
-    let temp=JSON.stringify(mark[markerId])//作用是把数组转变成可以在网页传递中的参数进行传递
-    console.log(mark)
-    this.setData({
-      lingyuanName: markerId,
-      showDialog: true,
-    })
-  },
+markertap: function(res) {
+  var that = this;
+  var mark=res.currentTarget.dataset.num;
+  var markerId=res.detail.markerId;
+  // let marknew=new(res);
+  // const latitudenew;
+  //    const longitudenew;
+ 
+  let latitude;
+  let longitude;
+  let description;
+  let name;
+  for(let i=0; i<mark.length; i++){
+    if(mark[i].id==markerId){
+      name=mark[i].name;
+      latitude=mark[i].latitude;
+      longitude=mark[i].longitude;
+      description=mark[i].description;
+      break;
+    }
+  }
+  wx.getLocation({
+    type: 'gcj02',
+    success: (res)=> {
+      let latitudenew = res.latitude;
+      let longitudenew = res.longitude;
+      console.log(latitudenew)
+      console.log(longitudenew)
+      let resKm = that.getDistance(latitudenew,longitudenew,latitude,longitude);
+     that.setData({
+      markNew: resKm,
+     })
+    }
+  })
+  console.log(mark)
+  console.log(latitude)
+  console.log(longitude)
+  
+  console.log(description)
+  console.log(name)
+  let resKm = that.getDistance(latitude,longitude,36.257532799,117.109192899);
+
+  this.setData({
+    markerName: name,
+    markTop:resKm,
+    markerdescription: description,
+    showDialog: true,
+  })
+},
   toggleDialog: function () {
     this.setData({
       showDialog: false,
