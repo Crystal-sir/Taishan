@@ -47,6 +47,7 @@
     <!-- 内容 -->
     <view class="zan-dialog__container">
         <view class="content">
+          <image class="dialogImg" src="{{image}}"></image>
             <view class="tips">
               <view class="markerName">{{markerName}}</view>
               <view class="markTop">{{markerName}}距离玉皇顶还有{{markTop}}</view>

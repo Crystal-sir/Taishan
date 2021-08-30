@@ -55,16 +55,8 @@ page{
   position:absolute;
   bottom: 120rpx;
   right:20rpx;
-  z-index: 100;
+  z-index: 1;
 }
-
-.img image {
-  width: 60px;
-  height: 90%;
-  margin: auto 7rpx;
-}
-
-
 
 /* 弹窗 */
 /*屏幕变暗 */
@@ -82,13 +74,13 @@ page{
   
 .zan-dialog__container {
   position: fixed; 
-  height: 400rpx;
+  /* height: 400rpx; */
   bottom: 0;
   width: 100%;
   left: 0;
   right: 0;
-  overflow-y: auto;
-  /* overflow: hidden; */
+  /* overflow-y: auto; */
+  overflow: hidden;
   border-top-left-radius: 40rpx;
   box-shadow: darkgrey 0rpx 5rpx 15rpx 8rpx;
   z-index: 1003;
@@ -110,8 +102,15 @@ page{
   align-items: center;
 }
 
+.dialogImg{
+  width: 50%;
+  vertical-align: bottom;
+  height: 230rpx;
+  border-radius: 8rpx
+}
+
 .content .tips{
-  width: 100%;
+  width: 46%;
 }
 
 .tips .markerName{
@@ -122,7 +121,7 @@ page{
   font-size: 48rpx;
   font-weight: bold;
   color: #292929ef;
-  padding: 20rpx 0rpx 10rpx 7rpx;
+  padding: 30rpx 0rpx 10rpx 7rpx;
 }
 
 .tips .markTop,.markNew{
