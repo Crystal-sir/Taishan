@@ -1021,62 +1021,7 @@ Page({
     currentItemId:"1"
     
   },
-  //获取用户信息
-  // onLoad: function() {
-  //   if (!wx.cloud) {
-  //     wx.redirectTo({
-  //       url: '../chooseLib/chooseLib',
-  //     })
-  //     return
-  //   }
-  //   // 获取用户信息
-  //   wx.getSetting({
-  //     success: res => {
-  //       if (res.authSetting['scope.userInfo']) {
-  //         // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-  //         wx.getUserInfo({
-  //           success: res => {
-  //             this.setData({
-  //               avatarUrl: res.userInfo.avatarUrl,
-  //               userInfo: res.userInfo
-  //             })
-  //           }
-  //         })
-  //       }
-  //       else{
-  //         wx.navigateTo({
-  //           url: '/pages/grant/grant',
-  //         })
-  //       }
-  //     }
-  //   })
-  // },
-  // onGetUserInfo: function(e) {
-  //   if (!this.data.logged && e.detail.userInfo) {
-  //     this.setData({
-  //       logged: true,
-  //       avatarUrl: e.detail.userInfo.avatarUrl,
-  //       userInfo: e.detail.userInfo
-  //     })
-  //   }
-  // },
-//调用云函数
-  // onGetOpenid: function() {
-  //   // 调用云函数
-  //   wx.cloud.callFunction({
-  //     name: 'login',
-  //     data: {},
-  //     success: res => {
-  //       console.log('[云函数] [login] user openid: ', res.result.openid)
-  //       app.globalData.openid = res.result.openid
-       
-  //     },
-  //     fail: err => {
-  //       console.error('[云函数] [login] 调用失败', err)
-       
-  //     }
-  //   })
-  // },
+
 //定位
 // 距离 
 onLoad: function() { 
@@ -1141,35 +1086,6 @@ onLoad: function() {
           url: "/pages/info/info?mar="+temp,
         })
     },
-//聊天室跳转
-  // navitap:function(){
-  
-  //      wx.navigateTo({
-  //     url: '/pages/chat/chat',
-  //      })
-  //     },
-  // 点击标点获取数据
-  // markertap(e) {
-  //   var id = e.markerId
-  //   var name = this.data.markers[id - 1].name
-  //   var latitude = this.data.buildlData.name
-  //   console.log(name)
-  //   console.log(latitude)
-  //   this.setData({
-  //     lingyuanName: name,
-  //     latitude:latitude,
-  //     showDialog: true,
-  //   })
-  // },
-  
-  // getLingyuanMarkers() {
-  //   let buildlData = map;
-  //   for (let item of lingyuanData) {
-  //     let marker = this.createMarker(item);
-  //     markers.push(marker)
-  //   }
-  //   return buildlData;
-  // },
 
 	rad (d) {//弧度转化
     return d * Math.PI / 180.0;
@@ -1230,29 +1146,7 @@ onLoad: function() {
     });
     
   },
-//标记跳转  新页面
 
-  // markertap(res) {
-	// 	// var that = this;
-  
-  //   var mark=res.currentTarget.dataset.num;
-  //   var markerId=res.detail.markerId;
-  //   // console.log(mark)
-  //   // const longitude = map[res.currentTarget.dataset.num-1].longitude;
-  //   // const latitude = map[res.currentTarget.dataset.num-1].latitude;
-	// 	// const resKm = that.getDistance(latitude,longitude,36.15,117.06);
-    
-  //   let temp=JSON.stringify(mark[markerId])//作用是把数组转变成可以在网页传递中的参数进行传递
-
-  //   // this.setData({
-  //   //       lingyuanName: temp,
-  //   //       disKm:resKm,
-  //   //       showDialog: true,
-  //   //     })
-  //       wx.navigateTo({
-  //         url: "/pages/info/info?mar="+temp,
-  //       })
-  //   },
 
 // 点击标点获取数据 底部弹框
 markertap: function(res) {

@@ -104,7 +104,7 @@ page{
 .zan-dialog--show .zan-dialog__mask {display: block;}
 
 .content{
-  padding: 40rpx 20rpx; 
+  padding: 0rpx 20rpx; 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -115,15 +115,19 @@ page{
 }
 
 .tips .markerName{
+  background-color: #f8f8f8;
+  position: sticky ;
+  top: 0rpx;
+  z-index: 2009;
   font-size: 48rpx;
   font-weight: bold;
   color: #292929ef;
-  padding: 0rpx 0rpx 10rpx 7rpx;
+  padding: 20rpx 0rpx 10rpx 7rpx;
 }
 
-.tips .markTop .markNew{
-  font-size: 48rpx;
-  font-weight: bold;
-  color: #292929ef;
+.tips .markTop,.markNew{
+  font-size: 38rpx;
+  /* font-weight: bold; */
+  color: #222122ce;
   padding: 0rpx 0rpx 10rpx 7rpx;
 } 
