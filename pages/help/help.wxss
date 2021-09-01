@@ -18,9 +18,9 @@ page{
 }
  
 .box>image {
-  width: 64rpx;
-  height: 55rpx;
-  padding: 14rpx;
+  width: 76rpx;
+  height: 76rpx;
+  padding: 10rpx;
 }
 /* .box>span{
   display: block;

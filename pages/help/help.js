@@ -8,7 +8,7 @@ var map= [
     "scale": 12,
     "latitude": "36.239898854",
     "longitude": "117.114859427",
-    "iconPath":"/image/all.png",
+    "iconPath":"/image/allScene.png",
     "data": [
       {
         "name": "岱庙",
@@ -2022,7 +2022,7 @@ var map= [
     "scale": 11.5,
     "latitude": 36.239898854,
     "longitude": 117.098320899,
-    "iconPath":"/image/park.png",
+    "iconPath":"/image/allPark.png",
     "data": [
       {
         "name": "天外村停车场",
@@ -2104,7 +2104,7 @@ var map= [
     "name": "售票处",
     "latitude": "36.266181799",
     "longitude": "117.098320899",
-    "iconPath":"/image/all.png",
+    "iconPath":"/image/allTicket.png",
     "data": [
       {
         "name": "泰山风景区售票处",
@@ -2254,7 +2254,7 @@ var map= [
     "scale": 13,
     "latitude": "36.25125",
     "longitude": "117.10798",
-    "iconPath":"/image/hotel.png",
+    "iconPath":"/image/allHotel.png",
     "data": [
       {
         "name": "玉液泉宾馆",
@@ -2364,16 +2364,16 @@ var map= [
     "name": "购物点",
     "latitude": "36.210022854",
     "longitude": "117.128302427",
-    "iconPath":"/image/all.png",
+    "iconPath":"/image/allShop.png",
     "data": [
       {
         "name": "泰山-特产超市",
         id: 0,
         "latitude": "36.210022854",
         "longitude": "117.128302427",
-        "iconPath": "/img/ico/boy_ss.png",
+        "iconPath": "/image/shop.png",
         "width": "30",
-        "height": "30",
+        "height": "40",
         callout: {padding:2,
           content:"泰山-特产超市",
           bgColor:"#1297DB",
@@ -2391,9 +2391,9 @@ var map= [
         id: 1,
         "latitude": "36.238980854",
         "longitude": "117.114380427",
-        "iconPath": "/img/ico/boy_ss.png",
+        "iconPath": "/image/shop.png",
         "width": "30",
-        "height": "30",
+        "height": "40",
         callout: {padding:2,
           content:"中溪商亭",
           bgColor:"#1297DB",
@@ -2411,9 +2411,9 @@ var map= [
         id: 2,
         "latitude": "36.248872",
         "longitude": "117.028889",
-        "iconPath": "/img/ico/girl_ss.png",
+        "iconPath": "/image/shop.png",
         "width": "30",
-        "height": "30",
+        "height": "40",
         callout: {padding:2,
           content:"立春茶业",
           bgColor:"#F19EC2",
@@ -2434,7 +2434,7 @@ var map= [
     "name": "卫生间",
     "latitude": "36.206679034",
     "longitude": "117.106396483",
-    "iconPath":"/image/toilet.png",
+    "iconPath":"/image/allToilet.png",
     "data": [
       {
         "name": "公共厕所",
