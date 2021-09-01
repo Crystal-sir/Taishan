@@ -28,6 +28,7 @@ Page({
     location:"",
     showHelp:false,
     jin:0,
+    done:0,
     
   },
   //检查一下是否全部点亮，以备显示点亮后地图
@@ -45,6 +46,7 @@ Page({
     let val=photo_array.length/22;
     this.setData({
       jin:val*100,
+      done:photo_array.length,
     })
   },
   //隐藏帮助菜单
@@ -92,7 +94,7 @@ Page({
     })
     if(num==undefined) {
       wx.showToast({
-        title:"请点击旁边的小花图标哦",
+        title:"请点击旁边的小花或景点图标哦",
         icon:"none",
       })
     }
@@ -293,6 +295,7 @@ Page({
       vis[i]=0;
       if(this.data.array[i]=="undefined"||this.data.array[i]==null) this.data.array[i]={};
       this.data.array[i].css="p"+i;//css样式
+      this.data.array[i].zcss="zp"+i;//遮罩层css
       this.data.array[i].id=i;//点的编号
       this.data.array[i].src="cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/icon_no.jpg";//初始化为未点亮图片
     }

@@ -155,6 +155,15 @@ button{
   bottom: 9%;
   right: 2%;
 }
+.zp0{
+  width: 60rpx;
+  height: 50rpx;
+
+  position: absolute;
+  bottom: 2%;
+  right: 6%;
+
+}
 .p1{
   width: 40rpx;
   height: 40rpx;
@@ -162,6 +171,15 @@ button{
   position:absolute;
   right: 8%;
   bottom: 10%;
+}
+.zp1{
+  width: 40rpx;
+  height: 40rpx;
+
+  position:absolute;
+  right: 16%;
+  bottom: 5%;
+
 }
 .p2{
   width: 40rpx;
@@ -171,6 +189,15 @@ button{
   right: 29%;
   bottom: 10%;
 }
+.zp2{
+  width: 40rpx;
+  height: 40rpx;
+
+  position:absolute;
+  right: 22%;
+  bottom: 10%;
+
+}
 .p3{
   width: 40rpx;
   height: 40rpx;
@@ -178,6 +205,15 @@ button{
   position:absolute;
   right: 7%;
   bottom: 20%;
+}
+.zp3{
+  width: 40rpx;
+  height: 40rpx;
+
+  position:absolute;
+  right: 14%;
+  bottom: 16%;
+
 }
 .p4{
   width: 40rpx;
@@ -187,6 +223,15 @@ button{
   right: 38%;
   bottom: 13%;
 }
+.zp4{
+  width: 40rpx;
+  height: 40rpx;
+
+  position:absolute;
+  right: 28%;
+  bottom: 14%;
+
+}
 .p5{
   width: 40rpx;
   height: 40rpx;
@@ -194,6 +239,15 @@ button{
   position:absolute;
   right: 41%;
   bottom: 19%;
+}
+.zp5{
+  width: 40rpx;
+  height: 40rpx;
+
+  position:absolute;
+  right: 33%;
+  bottom: 19%;
+
 }
 .p6{
   width: 40rpx;
@@ -203,6 +257,15 @@ button{
   right: 17%;
   bottom: 22%;
 }
+.zp6{
+  width: 40rpx;
+  height: 40rpx;
+
+  position:absolute;
+  right: 24%;
+  bottom: 22%;
+
+}
 .p7{
   width: 40rpx;
   height: 40rpx;
@@ -211,6 +274,15 @@ button{
   right: 37%;
   bottom: 25%;
 }
+.zp7{
+  width: 40rpx;
+  height: 40rpx;
+
+  position:absolute;
+  right: 33%;
+  bottom: 25%;
+
+}
 .p8{
   width: 40rpx;
   height: 40rpx;
@@ -218,6 +290,15 @@ button{
   position:absolute;
   right: 37%;
   bottom: 36%;
+}
+.zp8{
+  width: 40rpx;
+  height: 40rpx;
+
+  position:absolute;
+  right: 35%;
+  bottom: 32%;
+
 }
 .p9{
   width: 40rpx;
@@ -235,12 +316,29 @@ button{
   right: 61%;
   bottom: 42%;
 }
+.zp10{
+  width: 40rpx;
+  height: 40rpx;
+
+  position:absolute;
+  right: 48%;
+  bottom: 38%;
+
+}
 .p11{
   width: 40rpx;
   height: 40rpx;
 
   position:absolute;
   left: 19%;
+  top: 42%;
+}
+.zp11{
+  width: 40rpx;
+  height: 40rpx;
+
+  position:absolute;
+  left: 25%;
   top: 42%;
 }
 .p12{
@@ -251,6 +349,15 @@ button{
   left: 56%;
   top: 37%;
 }
+.zp12{
+  width: 50rpx;
+  height: 50rpx;
+
+  position:absolute;
+  left: 47%;
+  top: 37%;
+
+}
 .p13{
   width: 40rpx;
   height: 40rpx;
@@ -258,6 +365,15 @@ button{
   position:absolute;
   left: 15%;
   top: 36%;
+}
+.zp13{
+  width: 40rpx;
+  height: 40rpx;
+
+  position:absolute;
+  left: 27%;
+  top: 34%;
+
 }
 .p14{
   width: 40rpx;
@@ -267,6 +383,15 @@ button{
   left: 33%;
   top: 28%;
 }
+.zp14{
+  width: 40rpx;
+  height: 40rpx;
+
+  position:absolute;
+  left: 25%;
+  top: 28%;
+
+}
 .p15{
   width: 40rpx;
   height: 40rpx;
@@ -274,6 +399,15 @@ button{
   position:absolute;
   right: 22%;
   top: 55%;
+}
+.zp15{
+  width: 40rpx;
+  height: 40rpx;
+
+  position:absolute;
+  right: 34%;
+  top: 55%;
+
 }
 .p16{
   width: 40rpx;
@@ -283,6 +417,15 @@ button{
   right: 33%;
   top: 48%;
 }
+.zp16{
+  width: 40rpx;
+  height: 40rpx;
+
+  position:absolute;
+  right: 23%;
+  top: 50%;
+
+}
 .p17{
   width: 40rpx;
   height: 40rpx;
@@ -290,6 +433,15 @@ button{
   position:absolute;
   right: 12%;
   top: 50%;
+}
+.zp17{
+  width: 40rpx;
+  height: 40rpx;
+
+  position:absolute;
+  right: 12%;
+  top: 45%;
+
 }
 .p18{
   width: 40rpx;
@@ -299,6 +451,15 @@ button{
   right: 8%;
   top: 38%;
 }
+.zp18{
+  width: 40rpx;
+  height: 40rpx;
+
+  position:absolute;
+  right: 5%;
+  top: 40%;
+
+}
 .p19{
   width: 40rpx;
   height: 40rpx;
@@ -306,6 +467,14 @@ button{
   position:absolute;
   right: 22%;
   top: 24%;
+}
+.zp19{
+  width: 40rpx;
+  height: 40rpx;
+
+  position:absolute;
+  right: 12%;
+  top: 26%;
 }
 .p20{
   width: 40rpx;
@@ -315,6 +484,15 @@ button{
   right: 22%;
   top: 12%;
 }
+.zp20{
+  width: 40rpx;
+  height: 40rpx;
+
+  position:absolute;
+  right: 15%;
+  top: 12%;
+
+}
 .p21{
   width: 40rpx;
   height: 40rpx;
@@ -323,7 +501,15 @@ button{
   bottom: 10%;
   left: 38%;
 }
+.zp21{
+  width: 40rpx;
+  height: 40rpx;
 
+  position: absolute;
+  bottom: 7%;
+  left: 47%;
+
+}
 
 /*帮助页面*/
 .page-cont,.shadow-box{

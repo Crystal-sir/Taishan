@@ -1,0 +1,10 @@
+<!--pages/index/index.wxml-->
+
+  <image src="cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/index2.jpg"></image>
+  <view>
+    <button class='btn1' bindtap="goToPage1">进入程序</button>
+    <button class='btn2' bindtap="goToPage2">使用说明</button>
+  </view>
+ 
+
+

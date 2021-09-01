@@ -244,7 +244,7 @@ var map= [
           content:"红雨川",
           bgColor:"#FFFFFf",
           color:"#000000",
-          fontSize: 12, 
+          fontSize: 12,
           borderRadius:30,
           display:"BYCLICK"},
           "img": [
@@ -887,13 +887,113 @@ var map= [
           fontSize: 12,
           borderRadius:30,
           display:"BYCLICK"},
-        "img": [
-          ""
-        ],
-        "description": "",
-      }
+          "img": [
+            ""
+          ],
+          "description": ""
+        },
+      {
+        "name": "后石坞索道售票处",
+        id: 2,
+        "latitude": "36.25962798",
+        "longitude": "117.106804",
+        "iconPath": "/image/ticket.png",
+        "width": "30",
+        "height": "30",
+        callout: {padding:2,
+          content:"后石坞索道售票处",
+          bgColor:"#FFFFFf",
+          color:"#000000",
+          fontSize: 12,
+          borderRadius:30,
+          display:"BYCLICK"},
+          "img": [
+            ""
+          ],
+          "description": ""
+        },
+        {
+          "name": "桃花源索道售票处",
+          id: 3,
+          "latitude": "36.257880899",
+          "longitude": "117.10444045",
+          "iconPath": "/image/ticket.png",
+          "width": "30",
+          "height": "30",
+          callout: {padding:2,
+            content:"桃花源索道售票处",
+            bgColor:"#FFFFFf",
+            color:"#000000",
+            fontSize: 12,
+            borderRadius:30,
+            display:"BYCLICK"},
+            "img": [
+              ""
+            ],
+            "description": ""
+          },
+          {
+            "name": "桃花源索道售票处",
+            id: 4,
+            "latitude": "36.254798982",
+            "longitude": "117.080873472",
+            "iconPath": "/image/ticket.png",
+            "width": "30",
+            "height": "30",
+            callout: {padding:2,
+              content:"桃花源索道售票处",
+              bgColor:"#FFFFFf",
+              color:"#000000",
+              fontSize: 12,
+              borderRadius:30,
+              display:"BYCLICK"},
+              "img": [
+                ""
+              ],
+              "description": ""
+            },
+            {
+              "name": "天烛峰售票处",
+              id: 5,
+              "latitude": "36.265436799",
+              "longitude": "117.139983899",
+              "iconPath": "/image/ticket.png",
+              "width": "30",
+              "height": "30",
+              callout: {padding:2,
+                content:"天烛峰售票处",
+                bgColor:"#FFFFFf",
+                color:"#000000",
+                fontSize: 12,
+                borderRadius:30,
+                display:"BYCLICK"},
+                "img": [
+                  ""
+                ],
+                "description": ""
+              },
+              {
+                "name": "售票处(罗汉崖)",
+                id: 6,
+                "latitude": "36.212930521",
+                "longitude": "117.128366734",
+                "iconPath": "/image/ticket.png",
+                "width": "30",
+                "height": "30",
+                callout: {padding:2,
+                  content:"售票处(罗汉崖)",
+                  bgColor:"#FFFFFf",
+                  color:"#000000",
+                  fontSize: 12,
+                  borderRadius:30,
+                  display:"BYCLICK"},
+                  "img": [
+                    ""
+                  ],
+                  "description": ""
+                }
     ]
-  }
+  },
 ]
 
 
@@ -921,9 +1021,6 @@ Page({
     currentItemId:"1"
     
   },
-  // onLoad() {
-	// 	this.Location()
-	// },
   //获取用户信息
   // onLoad: function() {
   //   if (!wx.cloud) {
@@ -980,27 +1077,77 @@ Page({
   //     }
   //   })
   // },
+//定位
+// 距离 
+onLoad: function() { 
+  var that = this; 
+  wx.getLocation({ 
+      type: "gcj02", 
+      altitude:true,
+      success: (res)=>  { 
+              const latitude = res.latitude; 
+            const longitude = res.longitude; 
+            const altitude=res.altitude;
+              const resKm = that.getDistance(latitude,longitude,36.15,117.06); 
+              that.setData({ 
+                  // latitude: res.latitude, 
+        // longitude: res.longitude, 
+        // markers: this.getLingyuanMarkers(), 
+        disKm:resKm ,
+        alt:altitude
+        
+          }) 
+      } 
+  }) 
+}, 
+  dingwei:function(){
+    var that=this;
+  wx.getLocation({
+   type: 'gcj02',
+   success: function(res) {
+    that.setData({
+     latitude:res.latitude,
+     scale:16.4,
+     longitude:res.longitude
+    })
+   //console.log(res.latitude)
+   // console.log(res.longitude)
+   }
 
-// 距离
-onLoad: function() {
-		var that = this;
-		wx.getLocation({
-			type: "gcj02",
-			success: (res)=>  {
-				const latitude = res.latitude;
-	 	  	const longitude = res.longitude;
-				const resKm = that.getDistance(latitude,longitude,36.15,117.06);
-				that.setData({
-					// latitude: res.latitude,
-          // longitude: res.longitude,
-          // markers: this.getLingyuanMarkers(),
-          disKm:resKm
-          
-				})
-			}
-		})
+  })
+},
+//展示标志点
+  changePage: function (event) {
+    
+    this.setData({
+      currentItemId:event.currentTarget.dataset.num,
+      isSelectedBuildType: event.currentTarget.dataset.num-1,
+      longitude:map[event.currentTarget.dataset.num-1].longitude,
+      latitude:map[event.currentTarget.dataset.num-1].latitude,
+      scale: 16,
+    });
+    
   },
+//标记跳转
+  markertap(res) {
+   
+  
+    var mark=res.currentTarget.dataset.num;
+    var markerId=res.detail.markerId;
+    
+    let temp=JSON.stringify(mark[markerId])//作用是把数组转变成可以在网页传递中的参数进行传递
 
+        wx.navigateTo({
+          url: "/pages/info/info?mar="+temp,
+        })
+    },
+//聊天室跳转
+  // navitap:function(){
+  
+  //      wx.navigateTo({
+  //     url: '/pages/chat/chat',
+  //      })
+  //     },
   // 点击标点获取数据
   // markertap(e) {
   //   var id = e.markerId
@@ -1057,8 +1204,10 @@ onLoad: function() {
   dingwei:function(){
     var that=this;
   wx.getLocation({
-   type: 'gcj02',
+   type: 'wgs84',
+   altitude: true,
    success: function(res) {
+     console.log(res);
     that.setData({
      latitude:res.latitude,
      scale:16,

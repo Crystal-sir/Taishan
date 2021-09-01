@@ -347,8 +347,8 @@ margin-top: 40rpx;
 
 
 .img-style {
-  height: 80rpx;
-  width: 80rpx;
+  height: 120rpx;
+  width: 120rpx;
   position: fixed;
   top: 10%;
   left: 20%;

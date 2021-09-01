@@ -6,8 +6,12 @@
   data-num="{{buildlData[isSelectedBuildType].data}}">
 
   <view class="disKm">
-    <view>离山顶距离</view>
+    距山顶:
     {{disKm}}
+  </view>
+  <view class="alt">
+    海拔:
+    {{alt}}m
   </view>
 
 </map>

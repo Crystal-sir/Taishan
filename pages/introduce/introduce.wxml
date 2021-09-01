@@ -1,0 +1,21 @@
+<!--pages/introduce/introduce.wxml-->
+<view>
+<block wx:for-items="{{list}}" wx:key="{{item.id}}">
+  <view>
+  <view class="head">{{item.name}}</view>
+        <view class="minhead">首页</view>
+          <view class="kind-list-text">{{item.main}}</view>
+          <view class="divLine"></view>
+          <view class="minhead">景点预览</view>
+          <view class="kind-list-text">{{item.look}}</view>
+          <view class="divLine"></view>
+          <view class="minhead">登山助手</view>
+          <view class="kind-list-text">{{item.help}}</view>
+          <view class="divLine"></view>
+          <view class="minhead">旅行足迹</view>
+          <view class="kind-list-text">{{item.path}}</view>
+          <view class="divLine"></view>
+   </view>
+  </block>
+</view>
+

@@ -24,6 +24,7 @@
         <image src="{{mapUrl}}"></image>
         <view wx:for="{{array}}" wx:key="index">
           <image class="{{item.css}}" src="{{item.src}}" data-num="{{item.id}}"></image>
+          <view class="{{item.zcss}}" data-num="{{item.id}}"></view>
         </view>
       </movable-view>
       <image class="help" src="/images/help.png" bindtap="help"></image>
@@ -32,8 +33,8 @@
 </view>
 <!--进度条-->
 <view class="pro">
-  <progress active="true" percent="{{jin}}" show-info="true" stroke-width="3" activeColor="#10AEFF">
-    <text>已点亮</text>
+  <progress active="true" percent="{{jin}}"  stroke-width="3" activeColor="#10AEFF">
+    <text>{{done}}/{{mx}}个景点已点亮</text>
   </progress>
 </view>
 <!--引导页面-->

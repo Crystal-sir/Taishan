@@ -2,7 +2,7 @@ let fileid="";
 let photoName="";//静态图片名称
 let filepath="";//静态文件路径
 let num;//点击图片中点的编号
-let photo_array=new Array;//静态数组，保存用户查询到的所有图片信息
+let photo_array=new Array;//静态数组，保存所有图片信息
 Page({
 
   /**
@@ -127,26 +127,18 @@ showPopup() {
 query(e){
   let that=this;
   var arraypro = new Array;
-  wx.cloud.database().collection("zpicture").get({
+  wx.cloud.callFunction({
+    name:"zpicget",
     success(res){
-      photo_array=res.data;//保存图片信息至静态变量
+      photo_array=res.result.data;//保存图片信息至静态变量
       console.log(photo_array);
+      console.log(res);
     },
     fail(err){
       console.log(err);
     }
   });
-  wx.cloud.database().collection("zpicture").skip(20).get({
-    success(res){
-      for(let j=0;j<2;j++){
-        photo_array[20+j]=res.data[j];//保存图片信息至静态变量
-      }
-      console.log(photo_array);
-    },
-    fail(err){
-      console.log(err);
-    }
-  });
+ 
 },
   /**
    * 生命周期函数--监听页面加载
@@ -224,9 +216,9 @@ query(e){
       timingFunction: 'ease'
     })
     animationPlus.rotateZ(10).step();
-    animationcollect.translate(10, 50).rotateZ(0).opacity(1).step();
-    animationTranspond.translate(40, -39).rotateZ(0).opacity(1).step();
-    animationInput.translate(40, 5).rotateZ(0).opacity(1).step();
+    animationcollect.translate(-30, 50).rotateZ(0).opacity(1).step();
+    animationTranspond.translate(50, -42).rotateZ(0).opacity(1).step();
+    animationInput.translate(30, 18).rotateZ(0).opacity(1).step();
     this.setData({
       animPlus: animationPlus.export(),
       animCollect: animationcollect.export(),
