@@ -1,14 +1,9 @@
-
 /* 地图100%显示 */
 page{
 	height: 100%;
 }
 .disKm{
   float: right;
-  padding: 15rpx;
-}
-.alt{
-  float:left;
   padding: 15rpx;
 }
 .box {
@@ -52,14 +47,6 @@ page{
   color: transparent;
 }
 
-/* .img0 {
-  width: 80rpx;
-  height: 80rpx;
-  display: flex;
-  position:absolute;
-  bottom: 220rpx;
-  right:20rpx;
-} */
 .img1 {
   width: 80rpx;
   height: 80rpx;
@@ -67,118 +54,78 @@ page{
   position:absolute;
   bottom: 120rpx;
   right:20rpx;
+  z-index: 1;
 }
-
-.img image {
-  width: 60px;
-  height: 90%;
-  margin: auto 7rpx;
-}
-
-.item {
-  display: flex;
-  flex-direction: column;
-  margin: auto 0;
-}
-
-.itemName {
-  margin: 0 20rpx;
-  font-size: 32rpx;
-}
-
-.itemFloor {
-  margin: 0 20rpx;
-  font-size: 28rpx;
-  color: #555;
-}
-
-.text {
-  margin: auto 15px;
-  width: 13%;
-}
-
-.text image {
-  width: 70rpx;
-  height: 70rpx;
-}
-
-.controls {
-  position: relative;
-  top: 65%;
-  left: 85%;
-  /* display: flex; */
-}
-
-.controls .img {
-  margin-top: 5px;
-  width: 80rpx;
-  height: 80rpx;
-}
-
-.full {
-  top: 82%;
-}
-
-.chatroom{
-  display: flex;
-  
-  flex-direction: column;
-  
-  width: 110rpx;
-  height: 100rpx;
-  
-  position:absolute;
-  top: 10rpx;
-  right:1rpx;
-}
-
-.navigatorstyle{
-  width: 33.3%;
-  height: 20px;
-  font-size: 16px;
-  color:black;
-
-  border-style: solid;
-  border-width: 0.5rpx;
-  border-color:rgb(114, 113, 113) ;
-}
-.main-info{
- background-color: orange;
-}
-.main-info .textstyle{
-  font-size: 16px;
-
-}
-.main-info .number{
-  color: green;
-}
-
 
 /* 弹窗 */
-.zan-dialog__mask {position: fixed;top: 0; left: 0;right: 0;bottom: 0;background: rgba(0, 0, 0, 0); background: rgba(0, 0, 0, 0.4);display: none;z-index: 1001}
+/*屏幕变暗 */
+.zan-dialog__mask {
+  position: fixed;
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0); 
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  z-index: 1001
+}
   
-.zan-dialog__container {position: fixed; bottom: 0;width: 100%;left: 0;right: 0;overflow: hidden;border-top-left-radius: 40rpx;
-    box-shadow: darkgrey 0rpx 5rpx 15rpx 8rpx;z-index: 1003;
-    background: #f8f8f8; margin: 0 auto;transform: translateY(300%);transition: all 0.4s ease;border-top-right-radius: 30rpx;}
+.zan-dialog__container {
+  position: fixed; 
+  /* height: 400rpx; */
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+  /* overflow-y: auto; */
+  overflow: hidden;
+  border-top-left-radius: 40rpx;
+  box-shadow: darkgrey 0rpx 5rpx 15rpx 8rpx;
+  z-index: 1003;
+  background: #f8f8f8; 
+  margin: 0 auto;
+  transform: translateY(300%);
+  transition: all 0.4s ease;
+  border-top-right-radius: 30rpx;
+  word-wrap: break-word;
+}
   
 .zan-dialog--show .zan-dialog__container {transform: translateY(0);}
 .zan-dialog--show .zan-dialog__mask {display: block;}
 
-.b_line{margin: 0 20rpx;}
-.b_line .line{width: 40%;height: 25rpx;margin: 0 auto;background-color: #eee;border-radius: 25rpx;margin-top: 30rpx;}
-.b-adder text{font-size: 32rpx;color: #808080;margin-left: 10rpx;}
+.content{
+  padding: 0rpx 20rpx; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-.content{padding: 40rpx 20rpx; display: flex;justify-content: space-between;align-items: center;}
+.dialogImg{
+  width: 50%;
+  vertical-align: bottom;
+  height: 230rpx;
+  border-radius: 8rpx
+}
 
-.zan-img{width: 50%;vertical-align: bottom;height: 230rpx;border-radius: 8rpx}
-.content .tips{width: 46%}
+.content .tips{
+  width: 46%;
+}
 
-.tips .adder{font-size: 28rpx;color: #808080;padding: 10rpx 0;}
+.tips .markerName{
+  background-color: #f8f8f8;
+  position: sticky ;
+  top: 0rpx;
+  z-index: 2009;
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #292929ef;
+  padding: 30rpx 0rpx 10rpx 7rpx;
+}
 
-.tips .price{display: flex;justify-content: space-between;align-items: center;} 
-.price .jiage{font-size: 28rpx;color: #ff7428}
-.juli text{font-size: 28rpx;color: #0be200;}
-
-
-.viewlittle{width: 60rpx;height: 60rpx;overflow: hidden;background-color: #fff;position: fixed;bottom: 50rpx;right: 20rpx;display: flex;justify-content: center;align-items: center;border-radius: 8rpx;z-index: 1002}
-.viewlittle image{width: 50rpx;height: 50rpx;vertical-align: bottom;}
+.tips .markTop,.markNew{
+  font-size: 38rpx;
+  /* font-weight: bold; */
+  color: #222122ce;
+  padding: 0rpx 0rpx 10rpx 7rpx;
+} 

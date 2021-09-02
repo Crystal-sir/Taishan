@@ -1,4 +1,4 @@
-// pages/info/info.js
+// pages/index/index.js
 Page({
 
   /**
@@ -7,7 +7,20 @@ Page({
   data: {
 
   },
-
+  goToPage1: function () {
+    wx.switchTab({
+      url: '../main/main',
+      success(res){
+        console.log(res);
+      },
+      fail(err){
+        console.log(err);
+      }
+    })
+  },
+  goToPage2: function () {
+    wx.navigateTo({ url: '/pages/introduce/introduce', })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

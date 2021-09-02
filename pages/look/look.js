@@ -45,7 +45,7 @@ Page({
   })
   if(num==undefined) {
     wx.showToast({
-      title:"请点击旁边的小花图标哦",
+      title:"请点击景点处的小圈",
       icon:"none",
     })
   }
@@ -155,7 +155,7 @@ query(e){
       if(this.data.array[i]=="undefined"||this.data.array[i]==null) this.data.array[i]={};
       this.data.array[i].css="p"+i;//css样式
       this.data.array[i].id=i;//点的编号
-      this.data.array[i].src="cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/icon.png";
+      this.data.array[i].src="cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/transparent.png";
     }
     that.setData({
       array:that.data.array,
