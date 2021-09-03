@@ -13,7 +13,8 @@
           <view class="kind-list-text">{{item.path}}</view>
           <view class="divLine"></view>
           <view class="minhead">温馨提示</view>
-          <view class="kind-list-text">{{item.method}}</view>
+          <text>1、此条线为乘坐旅游车浏览，虽然方便快捷，但牺牲了众多景点的浏览机会。
+           2、泰山景区实行封闭运营，所有游客必须在天外村统一换乘景区专线旅游车。</text>
           <view class="divLine"></view>
    </view>
   </block>

@@ -27,7 +27,7 @@
 
 <scroll-view scroll-y="true" scroll-into-view="focusPointId" class="top-swich">
 
-  <view wx:for="{{buildlData}}" wx:key="id" id="{{index}}" >
+  <view wx:for="{{buildlData}}" wx:key="id" id="{{index}}" > 
     <!-- style    的作用是用来进行点击变色的 -->
     <!-- data-num 的作用是在'changePage'中传递过去的参数num -->
     <view style="color:{{item.fId==currentItemId?'#025e16':'#000'}}" data-num="{{item.fId}}" class="box"

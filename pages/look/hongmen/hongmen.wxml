@@ -13,7 +13,8 @@
           <view class="kind-list-text">{{item.path}}</view>
           <view class="divLine"></view>
           <view class="minhead">温馨提示</view>
-          <view class="kind-list-text">{{item.method}}</view>
+          <text>1、该路线为徒步浏览路线，全程9.5公里，其间几无平路。
+          2、在泰山火车站下车后，可乘坐3路公交车至红门；在泰安高铁站下车后，可乘坐37路公交车至红门，或乘坐61路“高铁泰安站-泰山景区”旅游专线直通车直达红门登山起点处。</text>
           <view class="divLine"></view>
    </view>
   </block>

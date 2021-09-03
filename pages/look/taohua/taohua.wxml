@@ -13,7 +13,9 @@
           <view class="kind-list-text">{{item.path}}</view>
           <view class="divLine"></view>
           <view class="minhead">温馨提示</view>
-          <view class="kind-list-text">{{item.method}}</view>
+          <text>1、彩石溪景区可免费游览。
+          2、该条路线最适宜游览的季节为春夏两季，春天桃花开时尤其美。
+          3、泰山火车站站前广场有16路专线旅游公交车往返，但下午5时便停止运行，请游客注意。</text>
           <view class="divLine"></view>
    </view>
   </block>

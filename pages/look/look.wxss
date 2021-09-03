@@ -79,7 +79,7 @@ movable-view{
   width: 600rpx;
   height: 800rpx;
   background-color: #ffffff;
- 
+  border-radius: 5%;
 }
 .popup .title{
   padding: 20rpx;
@@ -88,7 +88,7 @@ movable-view{
   line-height: 100rpx;
   font-size: 42rpx;
   text-align: center;
-  background-color: #eef8ea;
+
 }
 .popup .content{
   margin-left:50rpx;

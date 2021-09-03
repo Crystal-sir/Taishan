@@ -1,3 +1,9 @@
 {
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#eeee",
+    "navigationBarTitleText": "使用说明",
+    "navigationBarTextStyle": "black"
+  },
   "usingComponents": {}
 }
