@@ -5,7 +5,6 @@
     "pages/look/look",
     "pages/look/test/test",
     "pages/help/help",
-    "pages/info/info",
     "pages/main/weather/weather"
   ],
   "window": {

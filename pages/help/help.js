@@ -2438,6 +2438,7 @@ var map= [
     "data": [
       {
         "name": "公共厕所",
+        id: 0,
         "latitude": "36.206679034",
         "longitude": "117.106396483",
         "iconPath": "/image/toilet.png",
@@ -2457,6 +2458,7 @@ var map= [
         },
       {
         "name": "公共厕所",
+        id: 1,
         "latitude": "36.257481349",
         "longitude": "117.10901067",
         "iconPath": "/image/toilet.png",
@@ -2474,106 +2476,6 @@ var map= [
           ],
           "description": ""
         },
-      {
-        "name": "后石坞索道售票处",
-        id: 2,
-        "latitude": "36.25962798",
-        "longitude": "117.106804",
-        "iconPath": "/image/ticket.png",
-        "width": "30",
-        "height": "30",
-        callout: {padding:2,
-          content:"后石坞索道售票处",
-          bgColor:"#FFFFFf",
-          color:"#000000",
-          fontSize: 12,
-          borderRadius:30,
-          display:"BYCLICK"},
-          "img": [
-            ""
-          ],
-          "description": ""
-        },
-        {
-          "name": "桃花源索道售票处",
-          id: 3,
-          "latitude": "36.257880899",
-          "longitude": "117.10444045",
-          "iconPath": "/image/ticket.png",
-          "width": "30",
-          "height": "30",
-          callout: {padding:2,
-            content:"桃花源索道售票处",
-            bgColor:"#FFFFFf",
-            color:"#000000",
-            fontSize: 12,
-            borderRadius:30,
-            display:"BYCLICK"},
-            "img": [
-              ""
-            ],
-            "description": ""
-          },
-          {
-            "name": "桃花源索道售票处",
-            id: 4,
-            "latitude": "36.254798982",
-            "longitude": "117.080873472",
-            "iconPath": "/image/ticket.png",
-            "width": "30",
-            "height": "30",
-            callout: {padding:2,
-              content:"桃花源索道售票处",
-              bgColor:"#FFFFFf",
-              color:"#000000",
-              fontSize: 12,
-              borderRadius:30,
-              display:"BYCLICK"},
-              "img": [
-                ""
-              ],
-              "description": ""
-            },
-            {
-              "name": "天烛峰售票处",
-              id: 5,
-              "latitude": "36.265436799",
-              "longitude": "117.139983899",
-              "iconPath": "/image/ticket.png",
-              "width": "30",
-              "height": "30",
-              callout: {padding:2,
-                content:"天烛峰售票处",
-                bgColor:"#FFFFFf",
-                color:"#000000",
-                fontSize: 12,
-                borderRadius:30,
-                display:"BYCLICK"},
-                "img": [
-                  ""
-                ],
-                "description": ""
-              },
-              {
-                "name": "售票处(罗汉崖)",
-                id: 6,
-                "latitude": "36.212930521",
-                "longitude": "117.128366734",
-                "iconPath": "/image/ticket.png",
-                "width": "30",
-                "height": "30",
-                callout: {padding:2,
-                  content:"售票处(罗汉崖)",
-                  bgColor:"#FFFFFf",
-                  color:"#000000",
-                  fontSize: 12,
-                  borderRadius:30,
-                  display:"BYCLICK"},
-                  "img": [
-                    ""
-                  ],
-                  "description": ""
-                }
     ]
   },
 ]
