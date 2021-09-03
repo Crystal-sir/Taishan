@@ -3,19 +3,31 @@
 <block wx:for-items="{{list}}" wx:key="{{item.id}}">
   <view>
   <view class="head">{{item.name}}</view>
-  <image src='/images/tai.jpeg'></image>
+  <view class="picture">
+  <image src='cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/天外村.jpg'></image>
+  </view>
 </view>
     <view>
-        <view class="minhead">路线概述</view>
-          <view class="kind-list-text">{{item.describe}}</view>
-          <view class="divLine"></view>
-          <view class="minhead">沿途景点</view>
-          <view class="kind-list-text">{{item.path}}</view>
-          <view class="divLine"></view>
-          <view class="minhead">温馨提示</view>
-          <text>1、此条线为乘坐旅游车浏览，虽然方便快捷，但牺牲了众多景点的浏览机会。
-           2、泰山景区实行封闭运营，所有游客必须在天外村统一换乘景区专线旅游车。</text>
-          <view class="divLine"></view>
+    <view class="content">
+    <view class="incontent">
+    <text class="write">
+    <text class="title">路线概述</text>
+    {{item.describe}}
+    </text>
+    </view>
+    <view class="incontent">
+      <text class="write">
+    <text class="title">沿途景点</text>
+    {{item.path}}
+    </text>
+    </view>
+    <view class="incontent">
+    <text class="write">
+    <text class="title">温馨提示</text>
+    {{item.method}}
+    </text>
+    </view>
+    </view>
    </view>
   </block>
 </view>

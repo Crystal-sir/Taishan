@@ -1,23 +1,64 @@
 /* pages/look/hongmen/hongmen.wxss */
 
 .head{
-  height: 80rpx;
+  height: 40rpx;
   text-align: center;
   padding-top: 20rpx;
-  background-color: rgba(141, 192, 83, 0.3);
-  color: rgb(54, 141, 13);
+  color: rgb(247, 66, 66);
+  background-color : rgb(249,212,208);
+  font-style: italic;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 36rpx;
+  font-stretch: ultra-expanded;
+  font-weight: bold;
 }
 image{
-  height: 300rpx;
+  height: 350rpx;
+  width: 80%;
+  position: relative;
+  left: 10%;
+  border-radius: 20rpx;
+}
+.picture{
+  padding-top: 30rpx;
+  background-color: rgb(249,212,208);
+}
+.content{
+  background-color: rgb(249,212,208);
+  height: 100%;
   width: 100%;
+  padding: 30rpx 0 120rpx 0;
 }
-.minhead{
-  font-size: large;
-  height: 50rpx;
-  border-left: 5px solid rgb(6, 107, 3);
+
+.content .incontent{
+  background-color: rgb(253,253,253);
+  position: relative;
+  margin: 0rpx 30rpx 35rpx 30rpx;
+  box-shadow:  0 4rpx 8rpx 0 rgba(227,232,236), 0 6px 20px 0 rgba(227,232,236);
+  border-radius: 20rpx;
+  padding: 10rpx 25rpx 25rpx 25rpx;
+  
 }
-.divLine{
- background: #b9b9b9;
- width: 100%;
- height: 8rpx;
+
+.content .write{
+  width: auto;
+  height: auto;
+  word-wrap: break-word;
+  word-break: break-all;
+  overflow: hidden;
+}
+
+.content .title{
+  font-weight: bold;
+  font-size: 40rpx;
+  font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
+  line-height: 40px;
+}
+
+.title::before {
+  content: '|';
+  color: #2a9e94;
+  font-size: 25px;
+  vertical-align: 0px;
+  margin-right: 10px;
 }

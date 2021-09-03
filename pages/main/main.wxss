@@ -56,7 +56,7 @@ page {
 .header-modular {
   height: 200rpx;
   background-color: #64C8FA;
-  background: linear-gradient(to bottom, #56CCF2, #2F80ED);
+  background: linear-gradient(to bottom, #6cb9dde3, #349ddad7);
   position: relative;
   padding: 30rpx;
 }
