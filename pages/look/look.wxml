@@ -1,15 +1,14 @@
 <!--pages/help/help.wxml-->
- 
+<!--弹窗样式-->
 <view class='shade' hidden='{{popup}}' bindtap='hidePopup'></view>
 <scroll-view class='shade_box popup' hidden='{{popup}}' scroll-y="true">
 <view class="title">{{showname}} </view>
     <view class='content'>
       <image class='ima' src="{{showFileId}}" bindtap="look"></image>
     <view >{{showdescribe}}</view>
-    </view>
-    
+    </view> 
 </scroll-view>
-
+<!--地图-->
 <view class="container">
   <scroll-view style="height:100%;">
     <movable-area class="img" scale-area="true">
@@ -22,13 +21,12 @@
       </movable-view>
     </movable-area>
   </scroll-view>
-
+<!--小精灵推荐路线-->
   <view>
     <image src="/images/taohuayv1.png" class="img-style" animation="{{animCollect}}" bindtap="collect"></image>
     <image src="/images/tianwaicun1.png" class="img-style" animation="{{animTranspond}}" bindtap="transpond"></image>
     <image src="/images/hongmen1.png" class="img-style" animation="{{animInput}}" bindtap="input"></image>
     <image src=" /images/jingling.png" class="img-plus-style" animation="{{animPlus}}" catchtap="moreBtn"></image>
-
 </view>
   
 </view>

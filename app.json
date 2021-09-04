@@ -2,7 +2,6 @@
   "pages": [
     "pages/index/index",
     "pages/introduce/introduce",
-   
     "pages/look/look",
     "pages/look/hongmen/hongmen",
     "pages/look/taohua/taohua",

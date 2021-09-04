@@ -303,8 +303,5 @@ query(e){
    */
   onShareAppMessage: function () {
 
-  },
- gototest:function(){
-  wx.navigateTo({ url: '/pages/look/test/test', })
-}
+  }
 })
