@@ -1,18 +1,21 @@
 <!-- 地图页面 -->
-<!-- <view style="width: 100%; height: 100%;"> -->
-  <map longitude="{{longitude}}" style="width: 100%; height: 100%;" show-location latitude="{{latitude}}"
+ <view style="width: 100%; height: 100%;">
+  <map longitude="{{longitude}}" style="width: 100%; height: 100%; position: relative; left: 0rpx; top: 0rpx" show-location latitude="{{latitude}}"
   scale="{{buildlData[isSelectedBuildType].scale}}" markers="{{buildlData[isSelectedBuildType].data}}"
   bindmarkertap="markertap" label="{{buildlData[isSelectedBuildType].name}}" id="map"
   data-num="{{buildlData[isSelectedBuildType].data}}">
 
-  <view class="disKm">
-    距山顶:
-    {{disKm}}
+<button class="extent" bindtap='click'>隐藏</button>
+<view class="now-messages" hidden="{{hiddenName}}">
+  <view>
+    距山顶:{{disKm}}
   </view>
-  <view class="alt">
-    海拔:
-    {{alt}}m
+  <view>
+    <view>当前距离 <text style="font-weight: 700;">{{short.name}}</text> 最近</view>
+    <view>距离为{{short.len}}</view>
   </view>
+</view>
+
 
 </map>
 
@@ -60,4 +63,4 @@
 </view>
 
 
-<!-- </view> -->
+</view>

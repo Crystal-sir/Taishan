@@ -87,23 +87,23 @@ movable-view{
   height: 800rpx;
   font-size: 40rpx;
   background-color: #ffffff;
-  font-family: STFangsong ;
+  border-radius: 12rpx;
 }
 .popup .title{
-  padding: 0 20rpx;
-  border-bottom: #0e880a solid 1px;
-  height: 70rpx;
+  padding-top: 15rpx;
+  border-bottom: #e5e7e5 solid 1px;
+  height: 100rpx;
   line-height: 70rpx;
   font-size: 40rpx;
-  background-color:  #0e880a;
-  
+  background-color:   rgba(61, 117, 5, 0.829);
+  font-weight: 800;
   text-align: center;
 }
 .popup .content{
-  margin: 100rpx;
+  margin: 50rpx;
   font-size: 40rpx;
   text-align: center;
-  color: #0099ff;
+  color: #071a00;
 }
 .help-content{
   margin: 50rpx;
@@ -116,8 +116,8 @@ movable-view{
   padding: 10rpx;
 }
 .popup .content .ima{
-  height: 200rpx;
-  width: 300rpx;
+  height: 300rpx;
+  width: 450rpx;
 }
 .popup .copy{
   color: #999999;
@@ -128,13 +128,26 @@ movable-view{
   text-align: center;
   margin-top: 30rpx;
 }
+.popup .time{
+  font-size: 30rpx;
+  font-weight: 700;
+}
 /*弹窗部分*/ 
 .time{
   padding-top: 10px;
 }
+.buttons{
+  display: flex;
+}
 button{
   border: 1rpx solid green;
   margin-top: 20px;
+  width: 150rpx;
+  height: 100rpx;
+  border-radius: 20%;
+  padding: 0;
+  background-color: rgb(61, 117, 5);
+  color: white;
 }
 .help{
   width: 81rpx;
@@ -148,8 +161,8 @@ button{
 /*地图中图标位置部分*/
 .p0{
   
-  width: 40rpx;
-  height: 40rpx;
+  width: 50rpx;
+  height: 50rpx;
 
   position: absolute;
   bottom: 9%;
@@ -165,8 +178,8 @@ button{
 
 }
 .p1{
-  width: 40rpx;
-  height: 40rpx;
+  width: 50rpx;
+  height: 50rpx;
 
   position:absolute;
   right: 8%;
@@ -182,8 +195,8 @@ button{
 
 }
 .p2{
-  width: 40rpx;
-  height: 40rpx;
+  width: 50rpx;
+  height: 50rpx;
 
   position:absolute;
   right: 29%;
@@ -199,8 +212,8 @@ button{
 
 }
 .p3{
-  width: 40rpx;
-  height: 40rpx;
+  width: 50rpx;
+  height: 50rpx;
 
   position:absolute;
   right: 7%;
@@ -216,8 +229,8 @@ button{
 
 }
 .p4{
-  width: 40rpx;
-  height: 40rpx;
+  width: 50rpx;
+  height: 50rpx;
 
   position:absolute;
   right: 38%;
@@ -233,8 +246,8 @@ button{
 
 }
 .p5{
-  width: 40rpx;
-  height: 40rpx;
+  width: 50rpx;
+  height: 50rpx;
 
   position:absolute;
   right: 41%;
@@ -250,8 +263,8 @@ button{
 
 }
 .p6{
-  width: 40rpx;
-  height: 40rpx;
+  width: 50rpx;
+  height: 50rpx;
 
   position:absolute;
   right: 17%;
@@ -267,8 +280,8 @@ button{
 
 }
 .p7{
-  width: 40rpx;
-  height: 40rpx;
+  width: 50rpx;
+  height: 50rpx;
 
   position:absolute;
   right: 37%;
@@ -284,8 +297,8 @@ button{
 
 }
 .p8{
-  width: 40rpx;
-  height: 40rpx;
+  width: 50rpx;
+  height: 50rpx;
 
   position:absolute;
   right: 37%;
@@ -301,16 +314,16 @@ button{
 
 }
 .p9{
-  width: 40rpx;
-  height: 40rpx;
+  width: 50rpx;
+  height: 50rpx;
 
   position:absolute;
   right: 48%;
   bottom: 35%;
 }
 .p10{
-  width: 40rpx;
-  height: 40rpx;
+  width: 50rpx;
+  height: 50rpx;
 
   position:absolute;
   right: 61%;
@@ -326,8 +339,8 @@ button{
 
 }
 .p11{
-  width: 40rpx;
-  height: 40rpx;
+  width: 50rpx;
+  height: 50rpx;
 
   position:absolute;
   left: 19%;
@@ -342,8 +355,8 @@ button{
   top: 42%;
 }
 .p12{
-  width: 40rpx;
-  height: 40rpx;
+  width: 50rpx;
+  height: 50rpx;
 
   position:absolute;
   left: 56%;
@@ -359,8 +372,8 @@ button{
 
 }
 .p13{
-  width: 40rpx;
-  height: 40rpx;
+  width: 50rpx;
+  height: 50rpx;
 
   position:absolute;
   left: 15%;
@@ -376,8 +389,8 @@ button{
 
 }
 .p14{
-  width: 40rpx;
-  height: 40rpx;
+  width: 50rpx;
+  height: 50rpx;
 
   position:absolute;
   left: 33%;
@@ -393,8 +406,8 @@ button{
 
 }
 .p15{
-  width: 40rpx;
-  height: 40rpx;
+  width: 50rpx;
+  height: 50rpx;
 
   position:absolute;
   right: 22%;
@@ -410,8 +423,8 @@ button{
 
 }
 .p16{
-  width: 40rpx;
-  height: 40rpx;
+  width: 50rpx;
+  height: 50rpx;
 
   position:absolute;
   right: 33%;
@@ -427,8 +440,8 @@ button{
 
 }
 .p17{
-  width: 40rpx;
-  height: 40rpx;
+  width: 50rpx;
+  height: 50rpx;
 
   position:absolute;
   right: 12%;
@@ -444,8 +457,8 @@ button{
 
 }
 .p18{
-  width: 40rpx;
-  height: 40rpx;
+  width: 50rpx;
+  height: 50rpx;
 
   position:absolute;
   right: 8%;
@@ -461,8 +474,8 @@ button{
 
 }
 .p19{
-  width: 40rpx;
-  height: 40rpx;
+  width: 50rpx;
+  height: 50rpx;
 
   position:absolute;
   right: 22%;
@@ -477,8 +490,8 @@ button{
   top: 26%;
 }
 .p20{
-  width: 40rpx;
-  height: 40rpx;
+  width: 50rpx;
+  height: 50rpx;
 
   position:absolute;
   right: 22%;
@@ -494,8 +507,8 @@ button{
 
 }
 .p21{
-  width: 40rpx;
-  height: 40rpx;
+  width: 50rpx;
+  height: 50rpx;
 
   position: absolute;
   bottom: 10%;

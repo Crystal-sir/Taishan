@@ -2040,7 +2040,7 @@ var map= [
           borderRadius:30,
           display:"BYCLICK"},
           "img": [
-            ""
+          "cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/dialogimg/p0.jpg"
           ],
           "description": ""
         },
@@ -2060,7 +2060,7 @@ var map= [
           borderRadius:30,
           display:"BYCLICK"},
           "img": [
-            ""
+          "cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/dialogimg/p1.jpg"
           ],
           "description": ""
         },
@@ -2080,19 +2080,20 @@ var map= [
           borderRadius:30,
           display:"BYCLICK"},
           "img": [
-            ""
+          "cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/dialogimg/p2.jpg"
           ],
           "description": ""
         },
       {
         "name": "桃花峪停车场",
+        id: 3,
         "latitude": "36.261541",
         "longitude": "117.023184",
         "iconPath": "/image/park.png",
         "width": "30",
         "height": "30",
         "img": [
-          "cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/dialogimg/.jpg"
+          "cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/dialogimg/p3.jpg"
         ],
         "description": ""
       }
@@ -2122,7 +2123,7 @@ var map= [
           borderRadius:30,
           display:"BYCLICK"},
           "img": [
-            ""
+          "cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/dialogimg/t0.jpg"
           ],
           "description": ""
         },
@@ -2142,7 +2143,7 @@ var map= [
           borderRadius:30,
           display:"BYCLICK"},
           "img": [
-            ""
+          "cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/dialogimg/t1.jpg"
           ],
           "description": ""
         },
@@ -2162,7 +2163,7 @@ var map= [
           borderRadius:30,
           display:"BYCLICK"},
           "img": [
-            ""
+          "cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/dialogimg/t2.jpg"
           ],
           "description": ""
         },
@@ -2182,7 +2183,7 @@ var map= [
             borderRadius:30,
             display:"BYCLICK"},
             "img": [
-              ""
+          "cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/dialogimg/t3.jpg"
             ],
             "description": ""
           },
@@ -2202,7 +2203,7 @@ var map= [
               borderRadius:30,
               display:"BYCLICK"},
               "img": [
-                ""
+                "cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/dialogimg/t4.jpg"
               ],
               "description": ""
             },
@@ -2222,7 +2223,7 @@ var map= [
                 borderRadius:30,
                 display:"BYCLICK"},
                 "img": [
-                  ""
+                  "cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/dialogimg/t5.jpg"
                 ],
                 "description": ""
               },
@@ -2242,7 +2243,7 @@ var map= [
                   borderRadius:30,
                   display:"BYCLICK"},
                   "img": [
-                    ""
+                    "cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/dialogimg/t6.jpg"
                   ],
                   "description": ""
                 }
@@ -2272,7 +2273,7 @@ var map= [
           borderRadius:30,
           display:"BYCLICK"},
           "img": [
-            ""
+          "cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/dialogimg/h0.jpg"
           ],
           "description": ""
         },
@@ -2292,7 +2293,7 @@ var map= [
           borderRadius:30,
           display:"BYCLICK"},
           "img": [
-            ""
+          "cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/dialogimg/h1.jpg"
           ],
           "description": ""
         },
@@ -2312,7 +2313,7 @@ var map= [
           borderRadius:30,
           display:"BYCLICK"},
           "img": [
-            ""
+          "cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/dialogimg/h2.jpg"
           ],
           "description": ""
         },
@@ -2332,7 +2333,7 @@ var map= [
           borderRadius:30,
           display:"BYCLICK"},
           "img": [
-            ""
+          "cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/dialogimg/h3.jpg"
           ],
           "description": ""
         },
@@ -2352,7 +2353,7 @@ var map= [
           borderRadius:30,
           display:"BYCLICK"},
           "img": [
-            ""
+          "cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/dialogimg/h4.jpg"
           ],
           "description": ""
         },
@@ -2382,7 +2383,7 @@ var map= [
           borderRadius:30,
           display:"BYCLICK"},
           "img": [
-            ""
+          "cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/dialogimg/s0.jpg"
           ],
           "description": ""
         },
@@ -2402,7 +2403,7 @@ var map= [
           borderRadius:30,
           display:"BYCLICK"},
           "img": [
-            ""
+          "cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/dialogimg/s1.jpg"
           ],
           "description": ""
         },
@@ -2422,7 +2423,7 @@ var map= [
           borderRadius:30,
           display:"BYCLICK"},
           "img": [
-            ""
+          "cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/dialogimg/s2.jpg"
           ],
           "description": ""
         }
@@ -2452,7 +2453,7 @@ var map= [
           borderRadius:30,
           display:"BYCLICK"},
           "img": [
-            ""
+          "cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/dialogimg/wc0.jpg"
           ],
           "description": ""
         },
@@ -2472,7 +2473,7 @@ var map= [
           borderRadius:30,
           display:"BYCLICK"},
           "img": [
-            ""
+          "cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/dialogimg/wc1.jpg"
           ],
           "description": ""
         },
@@ -2481,20 +2482,18 @@ var map= [
 ]
 
 
-
-
-
 Page({
   data: {
-    //云开发数据
-      // avatarUrl: './user-unlogin.png',
-      // userInfo: {},
-      // logged: false,
-      // takeSession: false,
-      // requestResult: '',
-
+    /*地图中心位置*/
     latitude: 36.266181799,
     longitude: 117.098320899,
+    /**用户当前位置 */
+    nowlatitude:0,
+    nowlongitude:0,
+
+    /**距离最近景点信息 */
+    short:{},
+
     scale:13,
     buildlData: map,
     isSelectedBuild:0,
@@ -2502,301 +2501,231 @@ Page({
     islocation: true,
     focusPointId:"",
     isChecked:true ,
-    currentItemId:"1"
-    
+    currentItemId:"1",
+    disKm:0,
+
+    hiddenName:false,
   },
-  //获取用户信息
-  // onLoad: function() {
-  //   if (!wx.cloud) {
-  //     wx.redirectTo({
-  //       url: '../chooseLib/chooseLib',
-  //     })
-  //     return
-  //   }
-  //   // 获取用户信息
-  //   wx.getSetting({
-  //     success: res => {
-  //       if (res.authSetting['scope.userInfo']) {
-  //         // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-  //         wx.getUserInfo({
-  //           success: res => {
-  //             this.setData({
-  //               avatarUrl: res.userInfo.avatarUrl,
-  //               userInfo: res.userInfo
-  //             })
-  //           }
-  //         })
-  //       }
-  //       else{
-  //         wx.navigateTo({
-  //           url: '/pages/grant/grant',
-  //         })
-  //       }
-  //     }
-  //   })
-  // },
-  // onGetUserInfo: function(e) {
-  //   if (!this.data.logged && e.detail.userInfo) {
-  //     this.setData({
-  //       logged: true,
-  //       avatarUrl: e.detail.userInfo.avatarUrl,
-  //       userInfo: e.detail.userInfo
-  //     })
-  //   }
-  // },
-//调用云函数
-  // onGetOpenid: function() {
-  //   // 调用云函数
-  //   wx.cloud.callFunction({
-  //     name: 'login',
-  //     data: {},
-  //     success: res => {
-  //       console.log('[云函数] [login] user openid: ', res.result.openid)
-  //       app.globalData.openid = res.result.openid
-       
-  //     },
-  //     fail: err => {
-  //       console.error('[云函数] [login] 调用失败', err)
-       
-  //     }
-  //   })
-  // },
-//定位
-// 距离 
-onLoad: function() { 
-  var that = this; 
-  wx.getLocation({ 
-      type: "gcj02", 
-      altitude:true,
-      success: (res)=>  { 
-              const latitude = res.latitude; 
-            const longitude = res.longitude; 
-            const altitude=res.altitude;
-              const resKm = that.getDistance(latitude,longitude,36.15,117.06); 
-              that.setData({ 
-                  // latitude: res.latitude, 
-        // longitude: res.longitude, 
-        // markers: this.getLingyuanMarkers(), 
-        disKm:resKm ,
-        alt:altitude
-        
-          }) 
-      } 
-  }) 
-}, 
-  dingwei:function(){
-    var that=this;
-  wx.getLocation({
-   type: 'gcj02',
-   success: function(res) {
-    that.setData({
-     latitude:res.latitude,
-     scale:16.4,
-     longitude:res.longitude
-    })
-  
-   //console.log(res.latitude)
-   // console.log(res.longitude)
-   }
-  })
-},
 
-//定位
-// 距离 
-onLoad: function() { 
-  var that = this; 
-  wx.getLocation({ 
-      type: "gcj02", 
-      altitude:true,
-      success: (res)=>  { 
-              const latitude = res.latitude; 
-            const longitude = res.longitude; 
-            const altitude=res.altitude;
-              const resKm = that.getDistance(latitude,longitude,36.15,117.06); 
-              that.setData({ 
-                  // latitude: res.latitude, 
-        // longitude: res.longitude, 
-        // markers: this.getLingyuanMarkers(), 
-        disKm:resKm ,
-        alt:altitude
-        
-          }) 
-      } 
-  }) 
-}, 
-  dingwei:function(){
-    var that=this;
-  wx.getLocation({
-   type: 'gcj02',
-   success: function(res) {
-    that.setData({
-     latitude:res.latitude,
-     scale:16.4,
-     longitude:res.longitude
-    })
-   //console.log(res.latitude)
-   // console.log(res.longitude)
-   }
-
-  })
-},
-//展示标志点
-  changePage: function (event) {
-    
+  /*收缩窗口 */
+  click:function(e){
     this.setData({
-      currentItemId:event.currentTarget.dataset.num,
-      isSelectedBuildType: event.currentTarget.dataset.num-1,
-      longitude:map[event.currentTarget.dataset.num-1].longitude,
-      latitude:map[event.currentTarget.dataset.num-1].latitude,
-      scale: 16,
-    });
-    
-  },
-//标记跳转
-  markertap(res) {
-   
-  
-    var mark=res.currentTarget.dataset.num;
-    var markerId=res.detail.markerId;
-    
-    let temp=JSON.stringify(mark[markerId])//作用是把数组转变成可以在网页传递中的参数进行传递
+        hiddenName:!this.data.hiddenName
+    })
+},
 
-        wx.navigateTo({
-          url: "/pages/info/info?mar="+temp,
-        })
+  /**提示用户更改设置 */
+  Setting(){
+    console.log("提示用户改设置")
+    let that=this;
+    wx.showModal({
+      title: '提示',
+      content: '点击右上方更改设置为"在使用小程序期间和使用小程序后"即可定位',
+      success (res) {
+        if (res.confirm) {
+          console.log('打开设置')
+          that.openSetting();
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
+  },
+    onLoad: function() { 
+      console.log("进入登山助手")
+      this.getUserLocation(2);
+    }, 
+    rad (d) {//弧度转化
+      return d * Math.PI / 180.0;
+    },
+    //计算当前位置与山顶距离，其中山顶位置为玉皇极的位置.
+    getDistance(lat1, lng1, lat2, lng2) {
+      var radLat1 = this.rad(lat1);
+      var radLat2 = this.rad(lat2);
+      var a = radLat1 - radLat2;
+      var b = this.rad(lng1) - this.rad(lng2);
+      var s = 2 * Math.asin(Math.sqrt(Math.pow(Math.sin(a / 2), 2) +
+      Math.cos(radLat1) * Math.cos(radLat2) * Math.pow(Math.sin(b / 2), 2)));
+      s = s * 6378.137; // EARTH_RADIUS;
+      s = Math.round(s * 10000) / 10000; //输出为公里
+
+      var distance = s;
+      var distance_str = "";
+
+      if (parseInt(distance) >= 1) {
+        distance_str = distance.toFixed(2) + "km";
+      } else {
+        distance_str = distance.toFixed(2) * 1000 + "m";
+      }
+      return distance_str;
     },
 
-	rad (d) {//弧度转化
-    return d * Math.PI / 180.0;
-	},
-	//计算当前位置与山顶距离，其中山顶位置为玉皇极的位置.
-  getDistance(lat1, lng1, lat2, lng2) {
-    var radLat1 = this.rad(lat1);
-    var radLat2 = this.rad(lat2);
-    var a = radLat1 - radLat2;
-    var b = this.rad(lng1) - this.rad(lng2);
-    var s = 2 * Math.asin(Math.sqrt(Math.pow(Math.sin(a / 2), 2) +
-    Math.cos(radLat1) * Math.cos(radLat2) * Math.pow(Math.sin(b / 2), 2)));
-    s = s * 6378.137; // EARTH_RADIUS;
-    s = Math.round(s * 10000) / 10000; //输出为公里
 
-    var distance = s;
-    var distance_str = "";
 
-    if (parseInt(distance) >= 1) {
-      distance_str = distance.toFixed(2) + "km";
-    } else {
-      distance_str = distance.toFixed(2) * 1000 + "m";
+    //定位到用户当前位置
+    dingwei:function(){
+      console.log("返回用户当前位置")
+      let lat=this.data.nowlatitude;
+      let long=this.data.nowlongitude;
+      this.getUserLocation(2);
+      this.setData({
+        latitude:lat,
+        longitude:long,
+      })
+    },
+    //展示标志点
+    changePage: function (event) {
+      console.log("展示标记点");
+      this.setData({
+        currentItemId:event.currentTarget.dataset.num,
+        isSelectedBuildType: event.currentTarget.dataset.num-1,
+        longitude:map[event.currentTarget.dataset.num-1].longitude,
+        latitude:map[event.currentTarget.dataset.num-1].latitude,
+        scale: 16,
+      });
+      
+    },
+
+
+  // 点击标点获取数据 底部弹框
+  markertap: function(res) {
+    console.log("弹窗");
+    var that = this;
+    var mark=res.currentTarget.dataset.num;
+    var markerId=res.detail.markerId;
+    //点击景点信息
+    let latitude;
+    let longitude;
+    let img;
+    let description;
+    let name;
+    for(let i=0; i<mark.length; i++){
+      if(mark[i].id==markerId){
+        name=mark[i].name;
+        latitude=mark[i].latitude;
+        longitude=mark[i].longitude;
+        img=mark[i].img;
+        description=mark[i].description;
+        break;
+      }
     }
-    //s=s.toFixed(4);
-
-    console.info('距离是', s);
-    console.info('距离是', distance_str);
-    return distance_str;
-  },
-
-//定位
-  dingwei:function(){
-    var that=this;
-  wx.getLocation({
-   type: 'wgs84',
-   altitude: true,
-   success: function(res) {
-     console.log(res);
-    that.setData({
-     latitude:res.latitude,
-     scale:16,
-     longitude:res.longitude
-    })
-   //console.log(res.latitude)
-   // console.log(res.longitude)
-   }
-  })
-},
-//展示标志点
-  changePage: function (event) {
-    
+    //当前用户位置
+    let nowlatitude=that.data.nowlatitude;
+    let nowlongitude=that.data.nowlongitude;
+    //当前位置距离该景点距离
+    let resKm = that.getDistance(nowlatitude,nowlongitude,latitude,longitude);
+    //距离山顶距离
+    let top = that.getDistance(latitude,longitude,36.257532799,117.109192899);
+    //打印信息
+    console.log(name+" 当前景点经纬度 "+latitude+" "+longitude);
     this.setData({
-      currentItemId:event.currentTarget.dataset.num,
-      isSelectedBuildType: event.currentTarget.dataset.num-1,
-      longitude:map[event.currentTarget.dataset.num-1].longitude,
-      latitude:map[event.currentTarget.dataset.num-1].latitude,
-      scale: 16,
-    });
-    
+      markerName: name,
+      markTop:top,
+      image:img,
+      markerdescription: description,
+      showDialog: true,
+      markNew:resKm,
+    })
   },
-//标记跳转  新页面
-
-  // markertap(res) {
-	// 	// var that = this;
-  
-  //   var mark=res.currentTarget.dataset.num;
-  //   var markerId=res.detail.markerId;
-  //   // console.log(mark)
-  //   // const longitude = map[res.currentTarget.dataset.num-1].longitude;
-  //   // const latitude = map[res.currentTarget.dataset.num-1].latitude;
-	// 	// const resKm = that.getDistance(latitude,longitude,36.15,117.06);
-    
-  //   let temp=JSON.stringify(mark[markerId])//作用是把数组转变成可以在网页传递中的参数进行传递
-
-
-// 点击标点获取数据 底部弹框
-markertap: function(res) {
-  var that = this;
-  var mark=res.currentTarget.dataset.num;
-  var markerId=res.detail.markerId;
-  // let marknew=new(res);
-  // const latitudenew;
-  //    const longitudenew;
- 
-  let latitude;
-  let longitude;
-  let img;
-  let description;
-  let name;
-  for(let i=0; i<mark.length; i++){
-    if(mark[i].id==markerId){
-      name=mark[i].name;
-      latitude=mark[i].latitude;
-      longitude=mark[i].longitude;
-      img=mark[i].img;
-      description=mark[i].description;
-      break;
-    }
-  }
-  wx.getLocation({
-    type: 'gcj02',
-    success: (res)=> {
-      let latitudenew = res.latitude;
-      let longitudenew = res.longitude;
-      console.log(latitudenew)
-      console.log(longitudenew)
-      let resKm = that.getDistance(latitudenew,longitudenew,latitude,longitude);
-     that.setData({
-      markNew: resKm,
-     })
-    }
-  })
-  // console.log(mark)
-  // console.log(latitude)
-  // console.log(longitude)
-  
-  // console.log(description)
-  // console.log(name)
-  let resKm = that.getDistance(latitude,longitude,36.257532799,117.109192899);
-
-  this.setData({
-    markerName: name,
-    markTop:resKm,
-    image:img,
-    markerdescription: description,
-    showDialog: true,
-  })
-},
+  //显示弹窗
   toggleDialog: function () {
+    console.log("关闭弹窗")
     this.setData({
       showDialog: false,
     })
   },
 
+  //打开权限设置
+  openSetting(){
+    console.log("当前打开权限设置")
+    wx.openSetting({
+      withSubscriptions: true,
+    })
+  },
+  /**对用户权限信息进行检查
+   * flag=1时检测到没有权限不提示用户打开设置
+   * flag=2时检测到没有权限提示用户打开设置。 */
+  getUserLocation(flag=1) {
+    console.log("实时定位中")
+    wx.showLoading({
+      title: '定位中...',
+      mask: true,
+    })
+    let that=this;
+    wx.getSetting({
+      success(res) {
+        if (res.authSetting['scope.userLocationBackground']) {
+          wx.startLocationUpdateBackground({
+            success: (res) => {
+              console.log("有权限");
+              wx.hideLoading();
+            },
+            fail: (err) => {
+              console.log("无权限")
+              wx.hideLoading();
+              if(flag==2) that.Setting();
+            }
+          })
+        } else {
+          if (res.authSetting['scope.userLocation']==false) {
+            console.log('打开设置页面去授权')
+            that.openSetting();
+          } else {
+            wx.startLocationUpdateBackground({
+              success: (res) => {
+                console.log("有权限")
+                wx.hideLoading();
+              },
+              fail: (err) => {
+                console.log("无权限")
+                wx.hideLoading();
+                if(flag==2) that.Setting();
+              }
+            })
+          }
+        }
+      }
+    })
+  },
+  onShow() {
+    console.log("更新实时定位")
+    this.getUserLocation();
+    let that=this;
+    const _locationChangeFn = res=> {
+      console.log('用户当前坐标为', res.latitude, res.longitude)
+      let len=that.getDistance(res.latitude,res.longitude,36.257532799,117.109192899);
+      that.setData({
+        nowlatitude:res.latitude,
+        nowlongitude:res.longitude,
+        disKm:len,
+      })
+      that.Get();
+    }
+    wx.onLocationChange(_locationChangeFn);
+  },
+  //返回距离最近景点
+  Get(){
+    console.log("获取距离最近的景点");
+    //获取当前位置信息（提前存入data中)
+    let nowlatitude=this.data.nowlatitude;
+    let nowlongitude=this.data.nowlongitude;
+    //res为返回值，dis设置初始值
+    let res;
+    let dis=this.getDistance(nowlatitude,nowlongitude,36.257532799,117.109192899);
+    for(let i=0;i<map[0].data.length;i++){
+      //当前景点经纬度
+      let lat=map[0].data[i].latitude;
+      let long=map[0].data[i].longitude;
+      let val=this.getDistance(nowlatitude,nowlongitude,lat,long);
+      if(val<dis){
+        dis=val;
+        res=map[0].data[i];
+      }
+    }
+    //保存最短距离
+    res.len=dis;
+    this.setData({
+      short:res,
+    })
+  },
 })

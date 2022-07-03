@@ -145,6 +145,49 @@ Page({
     }
     this.showPopup();
   },
+  //删除指定编号num的信息
+  Delete(){
+    let that=this;
+    wx.cloud.database().collection("photo").where({
+      id:num,
+    }).remove({
+      success(res){
+        console.log("删除成功");
+        //that.uploadImage();
+      },
+      fail(err){
+        console.log("删除失败");
+      }
+    })
+  },
+  //用来处理删除当前图片
+  NewDelete(){
+    let that=this;
+    wx.cloud.database().collection("photo").where({
+      id:num,
+    }).remove({
+      success(res){
+        console.log("删除成功");
+        that.query();
+        that.hidePopup();
+        that.guan();
+        that.print("删除成功");
+      },
+      fail(err){
+        console.log("删除失败");
+      }
+    })
+  },
+  //关闭编号为num的灯
+  guan(){
+    let that=this;
+    vis[num]=0;
+    that.data.array[num].src="cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/icon_no.jpg";
+    //切换图片点亮状态
+    this.setData({
+      array:that.data.array,
+    })
+  },
   //处理上传图片逻辑
   do(){
     if(this.data.hasUserInfo){
@@ -182,6 +225,7 @@ Page({
       success(res){
         console.log(fileid);
         that.query();//更新photo_array数组
+        that.print("上传成功");
       }
     })
   },
@@ -224,7 +268,8 @@ Page({
         const tempFilePaths=res.tempFilePaths;//获得所有图片的路径信息，为数组值
         console.log(tempFilePaths[0]);//输出查看
         filepath=tempFilePaths[0];
-        that.uploadfile();
+        that.Delete();//成功选择图片之后删除所有编号为num的图片
+        that.uploadfile();//上传图片文件
       },
     })
   },
@@ -244,6 +289,9 @@ Page({
           vis[v]=1;
           that.data.array[v].src="cloud://yin-5g0cfopc68ce8576.7969-yin-5g0cfopc68ce8576-1306543725/icon.png";
           //切换图片点亮状态
+          console.log(photo_array[i]._openid);
+          console.log(photo_array[i].id);
+
         }
         //判断用户是否是第一次登录本页面
         let flag=true;
@@ -261,6 +309,14 @@ Page({
       }
     })
   },
+  print(op){
+    wx.showToast({
+      title:op,
+      icon: 'success',
+      duration: 2000
+    })
+  },
+
   /*
     用户点击一个景点时触发此事件
     已经知道num值,查找fileID
@@ -285,7 +341,13 @@ Page({
         canIUseGetUserProfile: true
       })
     }
+  },
 
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+    
     let that=this;//存储this指针
 
     const TIME=util.formatTime(new Date());
@@ -301,13 +363,6 @@ Page({
     }
     
     this.query();
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-    
   },
 
   /**

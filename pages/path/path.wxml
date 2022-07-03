@@ -8,7 +8,10 @@
         <image class='ima' src="{{showFileId}}" bindtap="look"></image>
         <view class="text">{{location}}</view>
         <view class="time">{{upTime}}上传</view>
-        <button bindtap="do">上传新图片</button>
+        <view class="buttons">
+          <button bindtap="do">重新上传</button>
+          <button bindtap="NewDelete">删除图片</button>
+        </view>      
       </view>
     </view>
     <view wx:else>
